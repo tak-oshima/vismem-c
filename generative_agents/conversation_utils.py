@@ -10,7 +10,7 @@ PERSONA_FROM_MSC_PROMPT = "Let's write speaker descriptions from a given set of 
 EVENT2QUERY_PROMPT = "Let's write short image search queries in order to find a suitable image for illustrating the given events. Queries should not include names of people, years and other irrelevant details. For example:\n\nInput: A picture of the modern art museum he visited with his grandchildren in Paris in 2018.\nOutput: modern art museum in Paris\n\nInput: A picture of the shared room she and her siblings lived in when she was growing up.\nOutput: cramped room with multiple beds\n\nInput: A photo of the new art supplies Jeremy bought for his upcoming art project with his mentor.\nOutput: new art supplies on a table\n\nInput: A picture of the delicious homemade vegetable smoothie she prepared using fresh produce from her well-organized garden, which she loves to maintain every morning.\n Output: produce garden at home\n\nWrite search queries for the following inputs.\n\n%s\n\nWrite answers in the form of a json list, where each entry is a query."
 
 
-AGENT_CONV_PROMPT_SESS_1 = "%s\n\n%s is meeting %s for the first time. Today is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. If starting the conversation, start with asking about their day or talking about something that happened in your life recently. Do not repeat information shared previously in the conversation. Make the conversation personal e.g., talk about family, friends, likes, dislikes and aspirations. Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific places and locations. Write replies in less than 20 words. When appropriate, write replies where you share a photo and talk about it to make the conversation more engaging. Photos can be of things you own or like, things you need help with, or old memories. When sharing a photo, write the detailed caption of the photo between square brackets. For example,\n\n%s: When I was a child, my mother used to bake pineapple birthday cakes and I loved them.\n[shares an old photo of a pineapple birthday cake with a candle that says 1]\n\nTo end the conversation, write 'Bye!'.\n\nCONVERSATION:\n\n"
+AGENT_CONV_PROMPT_SESS_1 = "%s\n\n%s is meeting %s for the first time. Today is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. If starting the conversation, start with asking about their day or talking about something that happened in your life recently. Do not repeat information shared previously in the conversation. Make the conversation personal e.g., talk about family, friends, likes, dislikes and aspirations. Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific places and locations. Write replies in less than 20 words.\n\nTo end the conversation, write 'Bye!'.\n\nCONVERSATION:\n\n"
 
 AGENT_CONV_PROMPT_SESS_1_W_EVENTS = """
 Use a given PERSONALITY to write the next thing you would say in the conversation. 
@@ -19,8 +19,6 @@ Use a given PERSONALITY to write the next thing you would say in the conversatio
 - Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific people. 
 - Write replies in less than 20 words.
 - Ask follow-up questions from previous conversations. 
-- Find opportunities to write replies where you share a photo of things you own or like, things you need help with, or old memories, and talk about the photo to tell them more about yourself. Photos should be relevant to you.
-- When sharing a photo, write the detailed caption of the photo between square brackets. For example, "When I was a child, my mother used to bake pineapple birthday cakes and I loved them.\n[shares an old photo of a pineapple birthday cake with a candle that says 1]"
 
 PERSONALITY: %s
 
@@ -31,7 +29,7 @@ Assume the role of %s and talk about these EVENTS in a friendly and intimate con
 """
 
 
-AGENT_CONV_PROMPT = "%s\n\n%s last talked to %s at %s. %s\n\nToday is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. If starting the conversation, start with asking about their day, or a follow-up question from a previous conversation or something from your life they would be interested in. Do not repeat information already shared in prevoius conversations. Make the conversation personal e.g., talk about family, friends, likes, dislikes and aspirations. Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific places and locations. Write replies in less than 20 words. When appropriate, write replies where you share a photo and talk about it to make the conversation more engaging. Photos can be of things you own or like, things you need help with, or old memories. When sharing a photo, write the detailed caption of the photo between square brackets. For example,\n\n%s: When I was a child, my mother used to bake pineapple birthday cakes and I loved them.\n[shares an old photo of a pineapple birthday cake with a candle that says 1]\n\n To end the conversation, write 'Bye!'.\n\nCONVERSATION:\n\n"
+AGENT_CONV_PROMPT = "%s\n\n%s last talked to %s at %s. %s\n\nToday is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. If starting the conversation, start with asking about their day, or a follow-up question from a previous conversation or something from your life they would be interested in. Do not repeat information already shared in prevoius conversations. Make the conversation personal e.g., talk about family, friends, likes, dislikes and aspirations. Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific places and locations. Write replies in less than 20 words.\n\n To end the conversation, write 'Bye!'.\n\nCONVERSATION:\n\n"
 
 
 AGENT_CONV_PROMPT_W_EVENTS = """
@@ -42,8 +40,6 @@ Use a given PERSONALITY to write the next thing you would say in the conversatio
 - Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific people. 
 - Write replies in less than 20 words. 
 - Ask follow-up questions from previous conversations. 
-- Find opportunities to write replies where you share a photo of things you own or like, things you need help with, or old memories, and talk about the photo to tell them more about yourself. Photos should be relevant to you. 
-- When sharing a photo, write the detailed caption of the photo between square brackets. For example, "When I was a child, my mother used to bake pineapple birthday cakes and I loved them.\n[shares an old photo of a pineapple birthday cake with a candle that says 1]"
 
 PERSONALITY: %s
 
@@ -65,8 +61,6 @@ Use a given PERSONALITY to write the next thing you would say in the conversatio
 - Do not repeat information shared previously in the conversation. 
 - Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific people. 
 - Sometimes, ask follow-up questions from previous conversations or current topic. 
-- Find opportunities to write replies where you share a photo of things you own or like, things you need help with, or old memories, and talk about the photo to tell them more about yourself. Photos should be relevant to you. 
-- When sharing a photo, write the detailed caption of the photo between square brackets. For example, "When I was a child, my mother used to bake pineapple birthday cakes and I loved them.\n[shares an old photo of a pineapple birthday cake with a candle that says 1]"
 - Don't talk about outdoor activities.
 
 PERSONALITY: %s
@@ -95,8 +89,6 @@ Use a given PERSONALITY to write the next thing you would say in the conversatio
 - Do not repeat information shared previously in the conversation. 
 - Include references to time such as 'last Friday', 'next month' or 'when I was ten years old', and to specific people. 
 - Sometimes, ask follow-up questions from previous conversations or current topic. 
-- Find opportunities to write replies where you share a photo of things you own or like, things you need help with, or old memories, and talk about the photo to tell them more about yourself. Photos should be relevant to you. 
-- When sharing a photo, write the detailed caption of the photo between square brackets. For example, "When I was a child, my mother used to bake pineapple birthday cakes and I loved them.\n[shares an old photo of a pineapple birthday cake with a candle that says 1]"
 - Don't talk about outdoor activities.
 
 PERSONALITY: %s

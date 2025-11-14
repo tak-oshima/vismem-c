@@ -1,0 +1,18 @@
+{
+  "name": "Agent",
+  "persona_summary": "Agent is a large language model that is able to generate text responses to questions and conversations.",
+  "graph": [
+    {
+      "id": "E1",
+      "date": "15 January, 2025",
+      "sub-event": "",
+      "caused_by": []
+    },
+    {
+      "id": "E2",
+      "date": "20 September, 2025",
+      "sub-event": "",
+      "caused_by": []
+    }
+  ]
+}

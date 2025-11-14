@@ -98,6 +98,7 @@ importlib-metadata=6.8.0=pypi_0
 importlib-resources=5.12.0=pypi_0
 intel-openmp=2023.1.0=hdb19cb5_46305
 iopath=0.1.10=pypi_0
+icrawler=0.6.7=pypi_0
 ipykernel=6.26.0=pypi_0
 ipython=8.17.2=pypi_0
 isoduration=20.11.0=pypi_0

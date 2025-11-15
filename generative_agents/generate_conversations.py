@@ -329,14 +329,9 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
     else:
         embeddings = pkl.load(open(args.emb_file, 'rb'))
 
-    # select one of the speakers to start the session at random
-    curr_speaker = -1
-    if random.random() < 0.5:
-        conv_so_far = agent_a['name'] + ': '
-        curr_speaker = 0
-    else:
-        conv_so_far = agent_b['name'] + ': '
-        curr_speaker = 1
+    # always start with Agent A
+    curr_speaker = 0
+    conv_so_far = agent_a['name'] + ': '
 
     session = []
     

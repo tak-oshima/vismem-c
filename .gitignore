@@ -1,0 +1,43 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Python caches and artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+
+# Packaging / distribution
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+.env
+.env.*
+.venv/
+venv/
+env/
+ENV/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Logs and local data
+logs/
+*.log
+*.sqlite3
+*.db
+*.ckpt
+
+# IDE / tooling
+.vscode/
+.idea/
+*.code-workspace
+
+

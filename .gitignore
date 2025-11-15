@@ -40,4 +40,7 @@ logs/
 .idea/
 *.code-workspace
 
+# Local env config
+scripts/env.sh
+
 

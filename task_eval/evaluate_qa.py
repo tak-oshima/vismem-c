@@ -105,6 +105,10 @@ def main():
         out_samples[data['sample_id']] = answers
 
 
+    out_dir = os.path.dirname(args.out_file)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
+
     with open(args.out_file, 'w') as f:
         json.dump(list(out_samples.values()), f, indent=2)
 

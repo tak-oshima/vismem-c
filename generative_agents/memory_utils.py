@@ -10,6 +10,27 @@ import random
 logging.basicConfig(level=logging.INFO)
 
 
+def _normalize_fact_entries(entries):
+    normalized = []
+    if entries is None:
+        return normalized
+    for entry in entries:
+        if isinstance(entry, (list, tuple)):
+            if not entry:
+                continue
+            fact_text = entry[0]
+            dialog_id = entry[1] if len(entry) > 1 else ''
+            normalized.append((fact_text, dialog_id))
+        elif isinstance(entry, dict):
+            fact_text = entry.get('fact') or entry.get('observation') or entry.get('text') or entry.get('value')
+            dialog_id = entry.get('dialog_id') or entry.get('dialogId') or entry.get('dialogue_id') or entry.get('dia_id') or entry.get('source', '')
+            if fact_text:
+                normalized.append((fact_text, dialog_id))
+        elif isinstance(entry, str):
+            normalized.append((entry, ''))
+    return normalized
+
+
 REFLECTION_INIT_PROMPT = "{}\n\nGiven the information above, what are the three most salient insights that {} has about {}? Give concise answers in the form of a json list where each entry is a string."
 
 REFLECTION_CONTINUE_PROMPT = "{} has the following insights about {} from previous interactions.{}\n\nTheir next conversation is as follows:\n\n{}\n\nGiven the information above, what are the three most salient insights that {} has about {} now? Give concise answers in the form of a json list where each entry is a string."
@@ -59,19 +80,36 @@ def get_session_facts(args, agent_a, agent_b, session_idx, return_embeddings=Tru
     if not return_embeddings:
         return facts
 
-    agent_a_embeddings = get_embedding([agent_a['session_%s_date_time' % session_idx] + ', ' + f for f, _ in facts[agent_a['name']]])
-    agent_b_embeddings = get_embedding([agent_b['session_%s_date_time' % session_idx] + ', ' + f for f, _ in facts[agent_b['name']]])
+    speaker_a_facts = _normalize_fact_entries(facts.get(agent_a['name'], []))
+    speaker_b_facts = _normalize_fact_entries(facts.get(agent_b['name'], []))
+
+    # ensure we save canonicalized fact format for downstream modules
+    facts[agent_a['name']] = [[fact, dialog_id] for fact, dialog_id in speaker_a_facts]
+    facts[agent_b['name']] = [[fact, dialog_id] for fact, dialog_id in speaker_b_facts]
+
+    agent_a_embeddings = get_embedding([agent_a['session_%s_date_time' % session_idx] + ', ' + fact for fact, _ in speaker_a_facts]) if speaker_a_facts else None
+    agent_b_embeddings = get_embedding([agent_b['session_%s_date_time' % session_idx] + ', ' + fact for fact, _ in speaker_b_facts]) if speaker_b_facts else None
 
     if session_idx > 1:
         with open(args.emb_file, 'rb') as f:
             embs = pkl.load(f)
-    
-        embs[agent_a['name']] = np.concatenate([embs[agent_a['name']], agent_a_embeddings], axis=0)
-        embs[agent_b['name']] = np.concatenate([embs[agent_b['name']], agent_b_embeddings], axis=0)
+
+        if agent_a_embeddings is not None:
+            if agent_a['name'] in embs:
+                embs[agent_a['name']] = np.concatenate([embs[agent_a['name']], agent_a_embeddings], axis=0)
+            else:
+                embs[agent_a['name']] = agent_a_embeddings
+        if agent_b_embeddings is not None:
+            if agent_b['name'] in embs:
+                embs[agent_b['name']] = np.concatenate([embs[agent_b['name']], agent_b_embeddings], axis=0)
+            else:
+                embs[agent_b['name']] = agent_b_embeddings
     else:
         embs = {}
-        embs[agent_a['name']] = agent_a_embeddings
-        embs[agent_b['name']] = agent_b_embeddings
+        if agent_a_embeddings is not None:
+            embs[agent_a['name']] = agent_a_embeddings
+        if agent_b_embeddings is not None:
+            embs[agent_b['name']] = agent_b_embeddings
     
     with open(args.emb_file, 'wb') as f:
         pkl.dump(embs, f)

@@ -293,7 +293,7 @@ def get_agent_query(speaker_1, speaker_2, curr_sess_id=0,
         else:
             query = AGENT_CONV_PROMPT_SESS_1 % (speaker_1['persona_summary'],
                                 speaker_1['name'], speaker_2['name'], 
-                                curr_sess_date_time, speaker_1['name'],  speaker_2['name'], speaker_1['name'])
+                                curr_sess_date_time, speaker_1['name'],  speaker_2['name'])
     
     else:
         if use_events:
@@ -316,7 +316,7 @@ def get_agent_query(speaker_1, speaker_2, curr_sess_id=0,
             summary = get_all_session_summary(speaker_1, curr_sess_id)
             query = AGENT_CONV_PROMPT % (speaker_1['persona_summary'],
                                         speaker_1['name'], speaker_2['name'], prev_sess_date_time, summary,
-                                        curr_sess_date_time, speaker_1['name'],  speaker_2['name'], speaker_1['name']) 
+                                        curr_sess_date_time, speaker_1['name'],  speaker_2['name']) 
     
     return query
 

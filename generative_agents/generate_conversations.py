@@ -47,6 +47,25 @@ def parse_args():
     return args
 
 
+def is_ai_agent(speaker):
+    if not isinstance(speaker, dict):
+        return False
+
+    if speaker.get('is_ai') or speaker.get('is_ai_agent'):
+        return True
+
+    role_keys = ['role', 'type', 'speaker_type', 'persona_type']
+    for key in role_keys:
+        value = speaker.get(key)
+        if isinstance(value, str) and value.lower() in ['assistant', 'agent', 'ai', 'bot', 'model']:
+            return True
+
+    persona_summary = speaker.get('persona_summary', '')
+    lowered = persona_summary.lower()
+    ai_indicators = ['language model', 'ai assistant', 'virtual assistant', 'chatbot', 'artificial intelligence']
+    return any(indicator in lowered for indicator in ai_indicators)
+
+
 def get_blip_caption(img_file, model, processor):
 
     raw_image = Image.open(img_file).convert('RGB')
@@ -288,12 +307,21 @@ def get_agent_query(speaker_1, speaker_2, curr_sess_id=0,
         if use_events:
             events = get_event_string(speaker_1['events_session_%s' % curr_sess_id], speaker_1['graph'])
             query = AGENT_CONV_PROMPT_SESS_1_W_EVENTS % (speaker_1['persona_summary'],
-                    speaker_1['name'], speaker_2['name'], 
                     curr_sess_date_time, speaker_1['name'],  events, speaker_1['name'], speaker_2['name'], stop_instruction if instruct_stop else '')
         else:
-            query = AGENT_CONV_PROMPT_SESS_1 % (speaker_1['persona_summary'],
-                                speaker_1['name'], speaker_2['name'], 
-                                curr_sess_date_time, speaker_1['name'],  speaker_2['name'])
+            speaker_is_ai = is_ai_agent(speaker_1)
+            if speaker_is_ai:
+                query = AGENT_CONV_PROMPT_SESS_1 % (
+                    speaker_1['persona_summary'],
+                    curr_sess_date_time,
+                    speaker_1['name'], speaker_2['name']
+                )
+            else:
+                query = USER_CONV_PROMPT_SESS_1 % (
+                    speaker_1['persona_summary'],
+                    curr_sess_date_time,
+                    speaker_1['name']
+                )
     
     else:
         if use_events:
@@ -314,9 +342,19 @@ def get_agent_query(speaker_1, speaker_2, curr_sess_id=0,
                             curr_sess_date_time, speaker_1['name'], speaker_1['session_%s_summary' % (curr_sess_id-1)], events, past_context, stop_instruction if instruct_stop else '', speaker_2['name'])
         else:
             summary = get_all_session_summary(speaker_1, curr_sess_id)
-            query = AGENT_CONV_PROMPT % (speaker_1['persona_summary'],
-                                        speaker_1['name'], speaker_2['name'], prev_sess_date_time, summary,
-                                        curr_sess_date_time, speaker_1['name'],  speaker_2['name']) 
+            speaker_is_ai = is_ai_agent(speaker_1)
+            if speaker_is_ai:
+                query = AGENT_CONV_PROMPT % (
+                    speaker_1['persona_summary'],
+                    speaker_1['name'], speaker_2['name'], prev_sess_date_time, summary,
+                    curr_sess_date_time, speaker_1['name'], speaker_2['name']
+                )
+            else:
+                query = USER_CONV_PROMPT % (
+                    speaker_1['persona_summary'],
+                    speaker_1['name'], prev_sess_date_time, summary,
+                    curr_sess_date_time, speaker_1['name']
+                )
     
     return query
 

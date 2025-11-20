@@ -1,18 +1,4 @@
 {
   "name": "Justin",
-  "persona_summary": "Justin is a 31 year old asian man working as a software engineer at American Airlines in Dallas. He likes to watch movies and TV shows on the weekends, and he likes to travel to different countries occasionally.",
-  "graph": [
-    {
-      "id": "E1",
-      "date": "15 January, 2025",
-      "sub-event": "Justin flew to Paris for a winter vacation and spent a week exploring museums and cafés across the city.",
-      "caused_by": []
-    },
-    {
-      "id": "E2",
-      "date": "20 September, 2025",
-      "sub-event": "Justin traveled to Tokyo for a tech conference and extended the trip to visit friends and explore new neighborhoods.",
-      "caused_by": []
-    }
-  ]
+  "persona_summary": "Justin is a 31 year old asian man working as a software engineer at American Airlines in Dallas. He likes to watch movies and TV shows on the weekends, and he likes to travel to different countries occasionally."
 }

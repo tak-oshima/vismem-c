@@ -534,17 +534,25 @@ def main():
 
                 # get conversation date and time for each session
                 curr_time = get_random_time() # timedelta object
-                curr_date = get_session_date([agent_a['graph'], agent_b['graph']], args, prev_date=prev_date_time) # datetime object
-                curr_date_time = curr_date + curr_time # datetime object
-                
-                relevant_events_a = get_relevant_events(agent_a['graph'],  curr_date_time, prev_date=prev_date_time)
-                agent_a['events_session_%s' % j] = relevant_events_a
-                relevant_events_b = get_relevant_events(agent_b['graph'],  curr_date_time, prev_date=prev_date_time)
-                agent_b['events_session_%s' % j] = relevant_events_b
+                if args.events:
+                    curr_date = get_session_date([agent_a['graph'], agent_b['graph']], args, prev_date=prev_date_time) # datetime object
+                    curr_date_time = curr_date + curr_time # datetime object
+                    
+                    relevant_events_a = get_relevant_events(agent_a['graph'],  curr_date_time, prev_date=prev_date_time)
+                    agent_a['events_session_%s' % j] = relevant_events_a
+                    relevant_events_b = get_relevant_events(agent_b['graph'],  curr_date_time, prev_date=prev_date_time)
+                    agent_b['events_session_%s' % j] = relevant_events_b
 
-                if len(relevant_events_a) == 0 and len(relevant_events_b) == 0:
-                    logging.info("Stoppping conversation because no more events available in KG.")
-                    break
+                    if len(relevant_events_a) == 0 and len(relevant_events_b) == 0:
+                        logging.info("Stoppping conversation because no more events available in KG.")
+                        break
+                else:
+                    if prev_date_time is not None:
+                        curr_date = prev_date_time + timedelta(days=random.choice([1, 2]))
+                    else:
+                        random_date = get_random_date()
+                        curr_date = datetime.combine(random_date, datetime.min.time())
+                    curr_date_time = curr_date + curr_time
 
                 curr_date_time_string = datetimeObj2Str(curr_date_time)
                 agent_a['session_%s_date_time' % j] = curr_date_time_string

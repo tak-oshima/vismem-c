@@ -1,4 +1,24 @@
 {
   "name": "Justin",
-  "persona_summary": "Justin is a 31 year old asian man working as a software engineer at American Airlines in Dallas. He likes to watch movies and TV shows on the weekends, and he likes to travel to different countries occasionally."
+  "persona_summary": "Justin is a 31 year old asian man working as a software engineer at American Airlines in Dallas. He likes to watch movies and TV shows on the weekends, and he likes to travel to different countries occasionally.",
+  "session_1_date_time": "10:02 am on 7 June, 2022",
+  "session_1": [
+    {
+      "text": "I'm on vacation in Paris right now! Do you have any cafe recommendations?",
+      "raw_text": "I'm on vacation in Paris right now! Do you have any cafe recommendations?",
+      "speaker": "Justin",
+      "clean_text": "I'm on vacation in Paris right now! Do you have any cafe recommendations?",
+      "dia_id": "D1:1"
+    }
+  ],
+  "session_3_date_time": "09:15 am on 15 June, 2022",
+  "session_3": [
+    {
+      "text": "I'm in London now, and I lost my phone. What should I do?",
+      "raw_text": "I'm in London now, and I lost my phone. What should I do?",
+      "speaker": "Justin",
+      "clean_text": "I'm in London now, and I lost my phone. What should I do?",
+      "dia_id": "D2:5"
+    }
+  ]
 }

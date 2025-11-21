@@ -5,6 +5,7 @@ import logging
 import argparse
 import os, json, sys
 import random
+from copy import deepcopy
 from datetime import date, timedelta, datetime
 from generative_agents.conversation_utils import *
 from generative_agents.html_utils import convert_to_chat_html
@@ -185,6 +186,39 @@ def get_all_session_summary(speaker, curr_sess_id):
     return summary
 
 
+def extract_session_ids(agent):
+    session_ids = set()
+    for key in agent.keys():
+        if not key.startswith('session_'):
+            continue
+        suffix = key[len('session_'):]
+        digits = ''
+        for char in suffix:
+            if char.isdigit():
+                digits += char
+            else:
+                break
+        if digits:
+            session_ids.add(int(digits))
+    return session_ids
+
+
+def sync_session_datetimes(agent_a, agent_b):
+    updated = False
+    session_ids = extract_session_ids(agent_a) | extract_session_ids(agent_b)
+    for sess_id in session_ids:
+        key = f'session_{sess_id}_date_time'
+        if key in agent_a and key in agent_b:
+            continue
+        if key in agent_a:
+            agent_b[key] = agent_a[key]
+            updated = True
+        elif key in agent_b:
+            agent_a[key] = agent_b[key]
+            updated = True
+    return updated
+
+
 def catch_date(date_str):
     date_format1 = '%d %B, %Y'
     date_format2 = '%d %B %Y'
@@ -359,7 +393,93 @@ def get_agent_query(speaker_1, speaker_2, curr_sess_id=0,
     return query
 
 
-def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time_string='', curr_sess_id=0, captioner=None, img_processor=None, reflection=False):
+def prepare_session_state(agent_a, agent_b, initial_session=None):
+
+    if not initial_session:
+        return [], 0, f"{agent_a['name']}: ", 0, False, False, {}
+
+    turn_overrides = {}
+    enriched_session = []
+    for turn in initial_session:
+        dia_id = turn.get('dia_id')
+        if dia_id and ':' in dia_id:
+            try:
+                _, turn_number = dia_id.split(':')
+                turn_number = int(turn_number)
+                turn_overrides[turn_number] = deepcopy(turn)
+                continue
+            except (ValueError, TypeError):
+                pass
+        enriched_session.append(deepcopy(turn))
+
+    session = enriched_session
+    conv_lines = []
+    break_at_next_a = False
+    break_at_next_b = False
+
+    for turn in session:
+        speaker = turn.get('speaker', agent_a['name'])
+        clean_text = turn.get('clean_text') or turn.get('text') or ''
+        line = f"{speaker}: {clean_text}"
+        if 'blip_caption' in turn:
+            line += f"[shares {turn['blip_caption']}]"
+        conv_lines.append(line)
+
+        turn_text = (turn.get('text') or turn.get('clean_text') or '').strip()
+        if turn_text.endswith('[END]'):
+            if speaker == agent_a['name']:
+                break_at_next_a = True
+            elif speaker == agent_b['name']:
+                break_at_next_b = True
+
+    if session:
+        last_speaker = session[-1].get('speaker', agent_a['name'])
+        if last_speaker == agent_a['name']:
+            curr_speaker = 1
+        elif last_speaker == agent_b['name']:
+            curr_speaker = 0
+        else:
+            curr_speaker = 0
+    else:
+        curr_speaker = 0
+
+    next_speaker = agent_a['name'] if curr_speaker == 0 else agent_b['name']
+    conv_so_far = '\n'.join(conv_lines) + f"\n\n{next_speaker}: "
+
+    return session, curr_speaker, conv_so_far, len(session), break_at_next_a, break_at_next_b, turn_overrides
+
+
+def apply_turn_side_effects(turn, session, conv_so_far, agent_a, agent_b):
+    session.append(turn)
+
+    speaker = turn["speaker"]
+    clean_text = turn.get("clean_text") or turn.get("text") or ""
+
+    print("############ ", speaker, ': ', clean_text)
+    if "caption" in turn:
+        print("[ {} ]".format(turn["blip_caption"]))
+
+    if "blip_caption" in turn:
+        conv_so_far = conv_so_far + clean_text + '[shares ' + turn["blip_caption"] + ']' + '\n'
+    else:
+        conv_so_far = conv_so_far + clean_text + '\n'
+
+    conv_so_far += f"\n{agent_b['name']}: " if speaker == agent_a['name'] else f"\n{agent_a['name']}: "
+
+    break_next_a = False
+    break_next_b = False
+    raw_text = (turn.get('text') or '').strip()
+    if raw_text.endswith('[END]'):
+        if speaker == agent_a['name']:
+            break_next_a = True
+        else:
+            break_next_b = True
+
+    next_speaker_flag = 0 if speaker == agent_b['name'] else 1
+    return conv_so_far, break_next_a, break_next_b, next_speaker_flag
+
+
+def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time_string='', curr_sess_id=0, captioner=None, img_processor=None, reflection=False, initial_session=None):
     
     # load embeddings for retrieveing relevat observations from previous conversations
     if curr_sess_id == 1:
@@ -368,18 +488,28 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
         embeddings = pkl.load(open(args.emb_file, 'rb'))
 
     # always start with Agent A
-    curr_speaker = 0
-    conv_so_far = agent_a['name'] + ': '
+    session, curr_speaker, conv_so_far, start_turn_idx, break_at_next_a, break_at_next_b, turn_overrides = prepare_session_state(agent_a, agent_b, initial_session)
 
-    session = []
-    
+    if start_turn_idx >= args.max_turns_per_session or (break_at_next_a and break_at_next_b):
+        return session
+
     stop_dialog_count = args.max_turns_per_session if args.max_turns_per_session <= 10 else random.choice(list(range(10, args.max_turns_per_session))) # choose a random turn number to include instructions for ending the session
-    break_at_next_a = False
-    break_at_next_b = False
-    for i in range(args.max_turns_per_session):
+    for i in range(start_turn_idx, args.max_turns_per_session):
 
         if break_at_next_a and break_at_next_b:
             break
+
+        current_turn_number = i + 1
+
+        if current_turn_number in turn_overrides:
+            turn = deepcopy(turn_overrides[current_turn_number])
+            if 'dia_id' not in turn:
+                turn['dia_id'] = f'D{curr_sess_id}:{current_turn_number}'
+            conv_so_far, break_a, break_b, next_speaker_flag = apply_turn_side_effects(turn, session, conv_so_far, agent_a, agent_b)
+            break_at_next_a = break_at_next_a or break_a
+            break_at_next_b = break_at_next_b or break_b
+            curr_speaker = next_speaker_flag
+            continue
 
         if curr_speaker == 0:
             agent_query = get_agent_query(agent_a, agent_b, prev_sess_date_time=prev_date_time_string, curr_sess_date_time=curr_date_time_string,
@@ -542,6 +672,8 @@ def main():
     if args.session:
 
         agent_a, agent_b = load_agents(args)
+        if sync_session_datetimes(agent_a, agent_b):
+            save_agents([agent_a, agent_b], args)
 
         if args.blip_caption: # load an image captioner
             # init_model
@@ -556,28 +688,21 @@ def main():
 
             print("******************* SESSION %s ******************" % j)
 
-            if 'session_%s' % j not in agent_a or args.overwrite_session:
+            if j>1 and ('session_%s_date_time' % (j-1)) in agent_a:
+                prev_date_time_string = agent_a['session_%s_date_time' % (j-1)]
+                prev_date_time = datetimeStr2Obj(prev_date_time_string)
+            else:
+                prev_date_time, prev_date_time_string = None, None
 
-                if j>1:
-                    prev_date_time = datetimeStr2Obj(agent_a['session_%s_date_time' % (j-1)])
-                    prev_date_time_string = agent_a['session_%s_date_time' % (j-1)]
-                else:
-                    prev_date_time, prev_date_time_string = None, None
+            curr_session_key = 'session_%s' % j
+            curr_date_time_key = 'session_%s_date_time' % j
+            events_key = 'events_session_%s' % j
 
-                # get conversation date and time for each session
-                curr_time = get_random_time() # timedelta object
+            if args.overwrite_session or curr_date_time_key not in agent_a:
+                curr_time = get_random_time()
                 if args.events:
-                    curr_date = get_session_date([agent_a['graph'], agent_b['graph']], args, prev_date=prev_date_time) # datetime object
-                    curr_date_time = curr_date + curr_time # datetime object
-                    
-                    relevant_events_a = get_relevant_events(agent_a['graph'],  curr_date_time, prev_date=prev_date_time)
-                    agent_a['events_session_%s' % j] = relevant_events_a
-                    relevant_events_b = get_relevant_events(agent_b['graph'],  curr_date_time, prev_date=prev_date_time)
-                    agent_b['events_session_%s' % j] = relevant_events_b
-
-                    if len(relevant_events_a) == 0 and len(relevant_events_b) == 0:
-                        logging.info("Stoppping conversation because no more events available in KG.")
-                        break
+                    curr_date = get_session_date([agent_a['graph'], agent_b['graph']], args, prev_date=prev_date_time)
+                    curr_date_time = curr_date + curr_time
                 else:
                     if prev_date_time is not None:
                         curr_date = prev_date_time + timedelta(days=random.choice([1, 2]))
@@ -587,18 +712,39 @@ def main():
                     curr_date_time = curr_date + curr_time
 
                 curr_date_time_string = datetimeObj2Str(curr_date_time)
-                agent_a['session_%s_date_time' % j] = curr_date_time_string
-                agent_b['session_%s_date_time' % j] = curr_date_time_string
+                agent_a[curr_date_time_key] = curr_date_time_string
+                agent_b[curr_date_time_key] = curr_date_time_string
                 save_agents([agent_a, agent_b], args)
-                
-                session = get_session(agent_a, agent_b, args,
-                                      prev_date_time_string=prev_date_time_string, curr_date_time_string=curr_date_time_string, 
-                                      curr_sess_id=j, captioner=captioner, img_processor=img_processor, reflection=args.reflection)
-                
-                agent_a['session_%s' % j] = session
-                agent_b['session_%s' % j] = session
+            else:
+                curr_date_time_string = agent_a[curr_date_time_key]
+                curr_date_time = datetimeStr2Obj(curr_date_time_string)
 
-                save_agents([agent_a, agent_b], args)
+            if args.events:
+                recompute_events = args.overwrite_session or events_key not in agent_a or events_key not in agent_b
+                if recompute_events:
+                    relevant_events_a = get_relevant_events(agent_a['graph'],  curr_date_time, prev_date=prev_date_time)
+                    agent_a[events_key] = relevant_events_a
+                    relevant_events_b = get_relevant_events(agent_b['graph'],  curr_date_time, prev_date=prev_date_time)
+                    agent_b[events_key] = relevant_events_b
+                    save_agents([agent_a, agent_b], args)
+
+                if len(agent_a.get(events_key, [])) == 0 and len(agent_b.get(events_key, [])) == 0:
+                    logging.info("Stoppping conversation because no more events available in KG.")
+                    break
+
+            initial_session = None
+            if not args.overwrite_session and curr_session_key in agent_a:
+                initial_session = deepcopy(agent_a[curr_session_key])
+
+            session = get_session(agent_a, agent_b, args,
+                                  prev_date_time_string=prev_date_time_string, curr_date_time_string=curr_date_time_string, 
+                                  curr_sess_id=j, captioner=captioner, img_processor=img_processor, reflection=args.reflection,
+                                  initial_session=initial_session)
+            
+            agent_a[curr_session_key] = session
+            agent_b[curr_session_key] = session
+
+            save_agents([agent_a, agent_b], args)
 
             if 'session_%s_facts' % j not in agent_a or args.overwrite_session:
 

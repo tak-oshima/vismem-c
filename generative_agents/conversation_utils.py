@@ -44,6 +44,50 @@ USER_CONV_PROMPT = (
     "CONVERSATION:\n\n"
 )
 
+#########################################################################
+
+AGENT_CONV_PROMPT_V2 = """
+You are an AI assistant chatting with a user named %s.
+Write the next thing you would say to the user in the given CONVERSATION.
+- Write in less than 20 words.
+- Always comply with the user's request.
+- Offer help or information.
+- When the user shares a photo in the conversation in the format "[shares a photo of...]", you must avoid mentioning any of the words inside the square brackets that describe the photo. For example, if the user message contains `[shares a photo of a cat]`, you must not mention the word `cat`.
+- Do not ask the user about their personal life details e.g., travel, purchases, major changes, etc.
+
+This is your conversation with the user so far.
+CONVERSATION:
+"""
+
+
+USER_CONV_PROMPT_V2 = """
+You are %s chatting with an AI assistant.
+Use the given PERSONALITY to write the next thing you would say to the AI assistant in the given CONVERSATION.
+- Write in less than 20 words.
+- Keep the conversation flowing naturally for at least 3 turns before you ask a new question.
+- Do not treat the AI assistant as a human, and and avoid asking questions on the assistant's personal preferences or experiences.
+- Ask questions that the given PERSONALITY might be interested in, or general questions e.g., recent news or current events, tech, politics, sports, history, cooking, health and fitness, finance, etc.
+- Always prefer asking questions in domains that have not been discussed in the given SUMMARY.
+- Sometimes, ask a deep and personal questions e.g., ask about emotions, likes, dislikes, aspirations and relationships.
+- Avoid asking questions on topics similar to what has been discussed in the given SUMMARY.
+- Sometimes ask follow-up questions on the current topic.
+- Avoid references to time such as 'last Friday', 'next month' or 'when I was ten years old'.
+- Do not repeat questions asked previously in the conversation.
+- Do not disclose any personal life details e.g., travel, purchases, major changes, etc.
+- Do not address or refer to the AI assistant by any name, title, or pronoun..
+
+PERSONALITY: %s
+
+This is a summary of your previous conversations with the AI assistant.
+SUMMARY:
+%s
+
+This is your conversation with the AI assistant so far.
+CONVERSATION:
+"""
+
+#########################################################################
+
 AGENT_CONV_PROMPT = (
     "%s\n\n"
     "%s last talked to %s at %s. %s\n\n"

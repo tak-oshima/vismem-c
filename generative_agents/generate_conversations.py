@@ -196,35 +196,48 @@ def get_agent_query(speaker_1, speaker_2, curr_sess_id=0,
                     prev_sess_date_time='', curr_sess_date_time='', 
                     use_events=False, instruct_stop=False, dialog_id=0, last_dialog='', embeddings=None, reflection=False):
 
-    if curr_sess_id == 1:
-        speaker_is_ai = is_ai_agent(speaker_1)
-        if speaker_is_ai:
-            query = AGENT_CONV_PROMPT_SESS_1 % (
-                speaker_1['persona_summary'],
-                curr_sess_date_time,
-                speaker_1['name'], speaker_2['name']
-            )
-        else:
-            query = USER_CONV_PROMPT_SESS_1 % (
-                speaker_1['persona_summary'],
-                curr_sess_date_time,
-                speaker_1['name']
-            )
+    # if curr_sess_id == 1:
+    #     speaker_is_ai = is_ai_agent(speaker_1)
+    #     if speaker_is_ai:
+    #         query = AGENT_CONV_PROMPT_SESS_1 % (
+    #             speaker_1['persona_summary'],
+    #             curr_sess_date_time,
+    #             speaker_1['name'], speaker_2['name']
+    #         )
+    #     else:
+    #         query = USER_CONV_PROMPT_SESS_1 % (
+    #             speaker_1['persona_summary'],
+    #             curr_sess_date_time,
+    #             speaker_1['name']
+    #         )
+    # else:
+    #     summary = get_all_session_summary(speaker_1, curr_sess_id)
+    #     speaker_is_ai = is_ai_agent(speaker_1)
+    #     if speaker_is_ai:
+    #         query = AGENT_CONV_PROMPT % (
+    #             speaker_1['persona_summary'],
+    #             speaker_1['name'], speaker_2['name'], prev_sess_date_time, summary,
+    #             curr_sess_date_time, speaker_1['name'], speaker_2['name']
+    #         )
+    #     else:
+    #         query = USER_CONV_PROMPT % (
+    #             speaker_1['persona_summary'],
+    #             speaker_1['name'], prev_sess_date_time, summary,
+    #             curr_sess_date_time, speaker_1['name']
+    #         )
+
+    summary = get_all_session_summary(speaker_1, curr_sess_id)
+    speaker_is_ai = is_ai_agent(speaker_1)
+    if speaker_is_ai:
+        query = AGENT_CONV_PROMPT_V2 % (
+            speaker_2['name'],
+        )
     else:
-        summary = get_all_session_summary(speaker_1, curr_sess_id)
-        speaker_is_ai = is_ai_agent(speaker_1)
-        if speaker_is_ai:
-            query = AGENT_CONV_PROMPT % (
-                speaker_1['persona_summary'],
-                speaker_1['name'], speaker_2['name'], prev_sess_date_time, summary,
-                curr_sess_date_time, speaker_1['name'], speaker_2['name']
-            )
-        else:
-            query = USER_CONV_PROMPT % (
-                speaker_1['persona_summary'],
-                speaker_1['name'], prev_sess_date_time, summary,
-                curr_sess_date_time, speaker_1['name']
-            )
+        query = USER_CONV_PROMPT_V2 % (
+            speaker_1['name'],
+            speaker_1['persona_summary'],
+            summary,
+        )
     
     return query
 

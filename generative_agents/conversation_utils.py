@@ -120,9 +120,6 @@ ALIGNMENT_PROMPT = "Let's write whether the given image is relevant to the dialo
 
 DIALOG2IMAGE_QUERY_PROMPT = "Let's write short image search queries from textual descriptions of photos shared by a user. Queries should not include names of people, years and other irrelevant details. For example:\n\nInput: That sounds relaxing, Jeremy! As for video game suggestions, have you ever tried \"The Legend of Zelda: Breath of the Wild\"? It's an open-world adventure game that I absolutely love. [shares a photo of Link standing in front of a breathtaking landscape] Have a look at this stunning view!\nOutput: the legend of zelda: breath of wild link landscape\n\nInput: That sounds like such a special memory. Learning how to ride a bike is definitely a milestone. Do you still enjoy biking now? [shares a photo of a scenic bike trail] This is a beautiful bike trail I came across recently. It looks like a peaceful place to ride.\nOutput: scenic bike trail\n\nInput: Yes, we also visited a beautiful sunflower field in Korea. [shares a photo of a vast field of sunflowers] It was such a stunning sight with rows and rows of vibrant yellow flowers stretching as far as the eye could see. It was definitely a highlight of our trip. Have you ever seen a sunflower field before?\n Output: sunflower field korea\n\nWrite search query for the following input.\n\nInput: %s\nOutput: "
 
-CASUAL_DIALOG_PROMPT = "Make the sentence short, less formal, less grandiose and more casual. \n\nInput: %s\nOutput: "
-
-
 SESSION_SUMMARY_PROMPT = "Previous conversations between %s and %s so far can be summarized as follows: %s. The current time and date are %s. %s and %s just had the following conversation:\n\n%s\n\nSummarize the previous and current conversations between %s and %s in 150 words or less. Include key facts about both speakers and time references.\n\n"
 
 

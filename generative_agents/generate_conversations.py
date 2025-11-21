@@ -435,14 +435,8 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
                     output['blip_caption'] = get_blip_caption(os.path.join(img_dir, file_names[0]), captioner, img_processor).replace('photography', 'photo')
 
         output["speaker"] = agent_a["name"] if curr_speaker == 0 else agent_b['name']
-        text_replaced_caption = replace_captions(output["text"], args)
-        if not text_replaced_caption.isspace():
-            if '[END]' in output["text"]:
-                output["clean_text"] = text_replaced_caption
-            else:
-                output["clean_text"] = run_chatgpt(CASUAL_DIALOG_PROMPT % text_replaced_caption, 1, 100, 'chatgpt').strip()
-        else:
-            output["clean_text"] = ""
+        text_replaced_caption = replace_captions(output["text"], args).strip()
+        output["clean_text"] = text_replaced_caption if text_replaced_caption else ""
         
         output["dia_id"] = 'D%s:%s' % (curr_sess_id, i+1)
         session.append(output)

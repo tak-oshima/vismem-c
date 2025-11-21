@@ -17,12 +17,12 @@
   "session_3": [
     {
       "speaker": "Justin",
-      "text": "Here's another photo I took today! [shares a photo of big ben]",
+      "text": "I'm on vacation again! Here's a photo I took this morning! [shares a photo of big ben]",
       "img_url": [
         "https://explorial.com/wp-content/uploads/2024/05/Point-3.png"
       ],
-      "clean_text": "Here's another photo I took today!",
-      "dia_id": "D3:5"
+      "clean_text": "I'm on vacation again! Here's a photo I took this morning!",
+      "dia_id": "D3:1"
     }
   ],
   "session_10_date_time": "11:02 am on 10 May, 2025",
@@ -42,7 +42,7 @@
       "question": "How many cities has Justin visited abroad in 2024?",
       "answer": "2",
       "evidence": [
-        "D1:1","D3:5"
+        "D1:1","D3:1"
       ],
       "category": 1
     },
@@ -58,7 +58,7 @@
       "question": "Which city did Justin visit in July, 2024?",
       "answer": "London",
       "evidence": [
-        "D3:5"
+        "D3:1"
       ],
       "category": 1
     },

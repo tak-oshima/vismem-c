@@ -1,24 +1,82 @@
-{
+  {
   "name": "Justin",
   "persona_summary": "Justin is a 31 year old asian man working as a software engineer at American Airlines in Dallas. He likes to watch movies and TV shows on the weekends, and he likes to travel to different countries occasionally.",
-  "session_1_date_time": "10:02 am on 7 June, 2022",
+  "session_1_date_time": "10:02 am on 7 June, 2024",
   "session_1": [
     {
-      "text": "I'm on vacation in Paris right now! Do you have any cafe recommendations?",
-      "raw_text": "I'm on vacation in Paris right now! Do you have any cafe recommendations?",
       "speaker": "Justin",
-      "clean_text": "I'm on vacation in Paris right now! Do you have any cafe recommendations?",
+      "text": "Just took this photo on my vacation! [shares a photo of eiffel tower]",
+      "img_url": [
+        "https://media.cntraveler.com/photos/58de89946c3567139f9b6cca/16:9/w_2560%2Cc_limit/GettyImages-468366251.jpg"
+      ],
+      "clean_text": "Just took this photo on my vacation!",
       "dia_id": "D1:1"
     }
   ],
-  "session_3_date_time": "09:15 am on 15 June, 2022",
+  "session_3_date_time": "09:15 am on 15 July, 2024",
   "session_3": [
     {
-      "text": "I'm in London now, and I lost my phone. What should I do?",
-      "raw_text": "I'm in London now, and I lost my phone. What should I do?",
       "speaker": "Justin",
-      "clean_text": "I'm in London now, and I lost my phone. What should I do?",
+      "text": "Here's another photo I took today! [shares a photo of big ben]",
+      "img_url": [
+        "https://explorial.com/wp-content/uploads/2024/05/Point-3.png"
+      ],
+      "clean_text": "Here's another photo I took today!",
       "dia_id": "D3:5"
+    }
+  ],
+  "session_10_date_time": "11:02 am on 10 May, 2025",
+  "session_10": [
+    {
+      "speaker": "Justin",
+      "text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case? [shares a photo of the receipt]",
+      "img_url": [
+        "https://www.receiptfaker.com/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Freceipt-faker-bbe70.firebasestorage.app%2Fo%2Fimages%252Fa2x58BESwAttWzYqqmwX%252Fa2x58BESwAttWzYqqmwX-f78cff54-5d2b-448b-8538-088a0516aaea.png%3Falt%3Dmedia%26token%3D959d5617-d646-4461-8543-da0fed6c3c9e&w=640&q=100"
+      ],
+      "clean_text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case?",
+      "dia_id": "D10:1"
+    }
+  ],
+  "qa": [
+    {
+      "question": "How many cities has Justin visited abroad in 2024?",
+      "answer": "2",
+      "evidence": [
+        "D1:1","D3:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which city did Justin visit in June, 2024?",
+      "answer": "Paris",
+      "evidence": [
+        "D1:1"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which city did Justin visit in July, 2024?",
+      "answer": "London",
+      "evidence": [
+        "D3:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "How much was the Airpods Max Justin bought?",
+      "answer": "$779",
+      "evidence": [
+        "D10:1"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which store at which location did Justin buy the Airpods Max from?",
+      "answer": "Apple Store, Pioneer Place",
+      "evidence": [
+        "D10:1"
+      ],
+      "category": 1
     }
   ]
 }

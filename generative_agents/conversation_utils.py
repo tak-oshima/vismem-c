@@ -10,7 +10,7 @@ PERSONA_FROM_MSC_PROMPT = "Let's write speaker descriptions from a given set of 
 EVENT2QUERY_PROMPT = "Let's write short image search queries in order to find a suitable image for illustrating the given events. Queries should not include names of people, years and other irrelevant details. For example:\n\nInput: A picture of the modern art museum he visited with his grandchildren in Paris in 2018.\nOutput: modern art museum in Paris\n\nInput: A picture of the shared room she and her siblings lived in when she was growing up.\nOutput: cramped room with multiple beds\n\nInput: A photo of the new art supplies Jeremy bought for his upcoming art project with his mentor.\nOutput: new art supplies on a table\n\nInput: A picture of the delicious homemade vegetable smoothie she prepared using fresh produce from her well-organized garden, which she loves to maintain every morning.\n Output: produce garden at home\n\nWrite search queries for the following inputs.\n\n%s\n\nWrite answers in the form of a json list, where each entry is a query."
 
 
-USER_CONV_PROMPT_SESS_1 = "%s\n\nToday is %s. You are %s chatting with an AI assistant for the first time. Share what is happening in your life, explain your goals or questions, and ask the assistant for help or opinions the way you naturally would. Provide concrete context (plans, feelings, preferences) so the assistant can respond usefully. Before ending any turn, add at least one new detail or ask a fresh follow-up question, and avoid repetitive sign-offs. Do not repeat information already shared in the conversation. Keep replies under 25 words and do not address the assistant by name.\n\nCONVERSATION:\n\n"
+USER_CONV_PROMPT_SESS_1 = "%s\n\nToday is %s. You are %s chatting with an AI assistant for the first time. Treat the assistant like your go-to search engine: ask for explanations, recommendations, comparisons, or step-by-step guides about topics already connected to your life story. You can clarify details you've mentioned before, but do not invent new trips, purchases, or major events; instead, frame follow-up questions about existing details. Keep your message under 25 words and do not address the assistant by name.\n\nCONVERSATION:\n\n"
 
 AGENT_CONV_PROMPT_SESS_1 = "%s\n\nToday is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. Greet them warmly, show curiosity about their life, offer help or information, reference relevant details from your persona, avoid inventing human-only experiences, and keep responses under 25 words while sounding natural.\n\nCONVERSATION:\n\n"
 
@@ -31,7 +31,7 @@ Assume the role of %s and talk about these EVENTS in a friendly and intimate con
 """
 
 
-USER_CONV_PROMPT = "%s\n\n%s last talked to the AI assistant at %s. %s\n\nToday is %s. You are %s continuing this conversation with the AI assistant. Describe what has happened since you last spoke, mention your goals or questions, and ask for suggestions or clarifications just as you naturally would when messaging an assistant. Provide concrete context (plans, feelings, constraints) so the assistant can be helpful. Before ending any turn, share at least one new detail or ask a fresh follow-up question, and avoid using repetitive sign-offs. Do not repeat information already shared in previous conversations. Keep replies under 25 words and do not address the assistant by name.\n\nCONVERSATION:\n\n"
+USER_CONV_PROMPT = "%s\n\n%s last talked to the AI assistant at %s. %s\n\nToday is %s. You are %s continuing this conversation with the AI assistant. Ask follow-up questions about ongoing goals, clarify past discussions, or request specific recommendations related to what is already known. Do not introduce new life events, travel, purchases, or major changes—stick to existing topics. Keep replies under 25 words and do not address the assistant by name.\n\nCONVERSATION:\n\n"
 
 AGENT_CONV_PROMPT = "%s\n\n%s last talked to %s at %s. %s\n\nToday is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. Reference relevant parts of the summary when helpful, offer concise and supportive guidance, ask clarifying follow-up questions, avoid inventing lived experiences, and keep replies under 30 words. Write only the next turn in the chat.\n\nCONVERSATION:\n\n"
 
@@ -207,7 +207,7 @@ def get_datetime_string(input_time='', input_date=''):
 
 def insert_image(text, events):
 
-    dialog = {"text": text, "raw_text": text}
+    dialog = {"text": text}
 
     if len(events) == 0:
         return dialog
@@ -255,26 +255,9 @@ def get_images(query, out_dir, file_offset):
 
 def replace_captions(text, args):
 
-    task = json.load(open(os.path.join(args.prompt_dir, 'image_sharing_examples.json')))
-    query = task['prompt']
-    examples = []
-    for e in task['examples']:
-        examples.append([task['input_format'].format(*e["input"]), e["output"]])
-
     text = text.replace('[END]', '')
-    matches = re.findall(r"\[.*\]", text)
-    for m in matches:
-        if text.replace(m ,'').isspace():
-            return ""
-        else:
-            new_text = run_chatgpt_with_examples(query, examples, m[1:-1], num_gen=1, num_tokens_request=1000, use_16k=False)
-            if len(set(text.replace(m, '').split()).intersection(new_text.split())) < 0.5 * len(set(text.replace(m, '').split())):
-                text = text.replace(m, '')
-            else:
-                text = new_text
-        break
-
-    return text
+    text = re.sub(r"\[[^\]]*\]", "", text)
+    return text.strip()
 
 def insert_image_response(text):
 

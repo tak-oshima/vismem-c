@@ -419,13 +419,13 @@ def prepare_session_state(agent_a, agent_b, initial_session=None):
 
     for turn in session:
         speaker = turn.get('speaker', agent_a['name'])
-        clean_text = turn.get('clean_text') or turn.get('text') or ''
-        line = f"{speaker}: {clean_text}"
+        text = turn.get('text') or ''
+        line = f"{speaker}: {text}"
         if 'blip_caption' in turn:
             line += f"[shares {turn['blip_caption']}]"
         conv_lines.append(line)
 
-        turn_text = (turn.get('text') or turn.get('clean_text') or '').strip()
+        turn_text = (turn.get('text') or '').strip()
         if turn_text.endswith('[END]'):
             if speaker == agent_a['name']:
                 break_at_next_a = True
@@ -453,23 +453,23 @@ def apply_turn_side_effects(turn, session, conv_so_far, agent_a, agent_b):
     session.append(turn)
 
     speaker = turn["speaker"]
-    clean_text = turn.get("clean_text") or turn.get("text") or ""
+    text = turn.get("text") or ""
 
-    print("############ ", speaker, ': ', clean_text)
+    print("############ ", speaker, ': ', text)
     if "caption" in turn:
         print("[ {} ]".format(turn["blip_caption"]))
 
     if "blip_caption" in turn:
-        conv_so_far = conv_so_far + clean_text + '[shares ' + turn["blip_caption"] + ']' + '\n'
+        conv_so_far = conv_so_far + text + '[shares ' + turn["blip_caption"] + ']' + '\n'
     else:
-        conv_so_far = conv_so_far + clean_text + '\n'
+        conv_so_far = conv_so_far + text + '\n'
 
     conv_so_far += f"\n{agent_b['name']}: " if speaker == agent_a['name'] else f"\n{agent_a['name']}: "
 
     break_next_a = False
     break_next_b = False
-    raw_text = (turn.get('text') or '').strip()
-    if raw_text.endswith('[END]'):
+    turn_text = (turn.get('text') or '').strip()
+    if turn_text.endswith('[END]'):
         if speaker == agent_a['name']:
             break_next_a = True
         else:
@@ -514,28 +514,27 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
         if curr_speaker == 0:
             agent_query = get_agent_query(agent_a, agent_b, prev_sess_date_time=prev_date_time_string, curr_sess_date_time=curr_date_time_string,
                                     curr_sess_id=curr_sess_id, use_events=args.events, instruct_stop=i>=stop_dialog_count, 
-                                    dialog_id=i, last_dialog='' if i == 0 else session[-1]['speaker'] + ' says, ' + session[-1]['clean_text'], 
+                                    dialog_id=i, last_dialog='' if i == 0 else session[-1]['speaker'] + ' says, ' + (session[-1].get('text') or ''), 
                                     embeddings=embeddings, reflection=reflection)
         else:
             agent_query = get_agent_query(agent_b, agent_a, prev_sess_date_time=prev_date_time_string, curr_sess_date_time=curr_date_time_string,
                                     curr_sess_id=curr_sess_id, use_events=args.events, instruct_stop=i>=stop_dialog_count, 
-                                    dialog_id=i, last_dialog='' if i == 0 else session[-1]['speaker'] + ' says, ' + session[-1]['clean_text'], 
+                                    dialog_id=i, last_dialog='' if i == 0 else session[-1]['speaker'] + ' says, ' + (session[-1].get('text') or ''), 
                                     embeddings=embeddings, reflection=reflection)
         
         # if the speaker in previous turn sent an image, get caption + questions
         if len(session) > 1 and "img_id" in session[-1]:
 
-            # caption = re.findall(r"\[.*\]", session[-1]['raw_text'])[0][1:-1]
             caption = "shares " + session[-1]['blip_caption']
             if curr_speaker == 0:
                 question = run_chatgpt(VISUAL_QUESTION_PROMPT.format(agent_a['persona_summary'], 
                                                                      agent_b['persona_summary'], 
-                                                                     agent_b['name'], session[-1]['clean_text'], caption,
+                                                                     agent_b['name'], session[-1].get('text') or '', caption,
                                                                      agent_a['name']), 1, 100, 'chatgpt')
             else:
                 question = run_chatgpt(VISUAL_QUESTION_PROMPT.format(agent_a['persona_summary'], 
                                                                      agent_b['persona_summary'], 
-                                                                     agent_a['name'], session[-1]['clean_text'], caption,
+                                                                     agent_a['name'], session[-1].get('text') or '', caption,
                                                                      agent_b['name']), 1, 100, 'chatgpt')
             question = question.strip()
 
@@ -547,7 +546,7 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
         output = run_chatgpt(agent_query + conv_so_far, 1, 100, 'chatgpt', temperature=1.2)
         output = output.strip().split('\n')[0]
         output = clean_dialog(output, agent_a['name'] if curr_speaker == 0 else agent_b['name'])
-        output = {"text": output, "raw_text": output}
+        output = {"text": output}
 
         image_search_query, photo_caption = insert_image_response(output["text"])
         if image_search_query is not None:
@@ -572,15 +571,15 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
         session.append(output)
 
         # print(output)
-        print("############ ", agent_a['name'] if curr_speaker == 0 else agent_b['name'], ': ', output["clean_text"])
+        print("############ ", agent_a['name'] if curr_speaker == 0 else agent_b['name'], ': ', output["text"])
         if "caption" in output:
             print("[ {} ]".format(output["blip_caption"]))
         
         # conv_so_far = conv_so_far + output["text"] + '\n'
         if "blip_caption" in output:
-            conv_so_far = conv_so_far + output["clean_text"] + '[shares ' + output["blip_caption"] + ']' + '\n'
+            conv_so_far = conv_so_far + output["text"] + '[shares ' + output["blip_caption"] + ']' + '\n'
         else:
-            conv_so_far = conv_so_far + output["clean_text"] + '\n'
+            conv_so_far = conv_so_far + output["text"] + '\n'
 
 
 

@@ -1,52 +1,23 @@
 import json, re, os
 import random
-from global_methods import run_chatgpt, run_chatgpt_with_examples
+from global_methods import run_chatgpt
 
-PERSONA_FROM_MSC_PROMPT = (
-    "Let's write speaker descriptions from a given set of life attributes. Example:\n\n%s\n\n"
-    "Note: Add crucial details in the persona about the person such as their name, age, marital status, "
-    "gender, job etc. Add additional details like names of family/friends or specific activities, "
-    "likes and dislikes, experiences when appropriate.\n\n"
-    "For the following attributes, write a persona. Output a json file with the keys 'persona' and 'name'.\n\n"
-    "%s\n\n"
-    "Start your answer with a curly bracket.\n"
-)
+PERSONA_FROM_MSC_PROMPT = """
+Let's write speaker descriptions from a given set of life attributes. Example:
+
+%s
+
+Note: Add crucial details in the persona about the person such as their name, age, marital status, gender, job etc. Add additional details like names of family/friends or specific activities, likes and dislikes, experiences when appropriate.
+
+For the following attributes, write a persona. Output a json file with the keys 'persona' and 'name'.
+
+%s
+
+Start your answer with a curly bracket.
+"""
 
 
-USER_CONV_PROMPT_SESS_1 = (
-    "%s\n\n"
-    "Today is %s. You are %s chatting with an AI assistant for the first time. "
-    "Treat the assistant like your go-to search engine: ask for explanations, recommendations, "
-    "comparisons, or step-by-step guides about topics already connected to your life story. "
-    "You can clarify details you've mentioned before, but do not invent new trips, purchases, "
-    "or major events; instead, frame follow-up questions about existing details. "
-    "Keep your message under 25 words and do not address the assistant by name.\n\n"
-    "CONVERSATION:\n\n"
-)
-
-AGENT_CONV_PROMPT_SESS_1 = (
-    "%s\n\n"
-    "Today is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. "
-    "Greet them warmly, show curiosity about their life, offer help or information, "
-    "reference relevant details from your persona, avoid inventing human-only experiences, "
-    "and keep responses under 25 words while sounding natural.\n\n"
-    "CONVERSATION:\n\n"
-)
-
-USER_CONV_PROMPT = (
-    "%s\n\n"
-    "%s last talked to the AI assistant at %s. %s\n\n"
-    "Today is %s. You are %s continuing this conversation with the AI assistant. "
-    "Ask follow-up questions about ongoing goals, clarify past discussions, or request specific "
-    "recommendations related to what is already known. Do not introduce new life events, travel, "
-    "purchases, or major changes—stick to existing topics. "
-    "Keep replies under 25 words and do not address the assistant by name.\n\n"
-    "CONVERSATION:\n\n"
-)
-
-#########################################################################
-
-AGENT_CONV_PROMPT_V2 = """
+AGENT_CONV_PROMPT = """
 You are an AI assistant chatting with a user named %s.
 Write the next thing you would say to the user in the given CONVERSATION.
 - Write in less than 20 words.
@@ -60,7 +31,7 @@ CONVERSATION:
 """
 
 
-USER_CONV_PROMPT_V2 = """
+USER_CONV_PROMPT = """
 You are %s chatting with an AI assistant.
 Use the given PERSONALITY to write the next thing you would say to the AI assistant in the given CONVERSATION.
 - Write in less than 20 words.
@@ -86,31 +57,20 @@ This is your conversation with the AI assistant so far.
 CONVERSATION:
 """
 
-#########################################################################
 
-AGENT_CONV_PROMPT = (
-    "%s\n\n"
-    "%s last talked to %s at %s. %s\n\n"
-    "Today is %s. Assume the role of %s and write the next thing you would say to %s in the conversation. "
-    "Reference relevant parts of the summary when helpful, offer concise and supportive guidance, "
-    "ask clarifying follow-up questions, avoid inventing lived experiences, and keep replies under 30 words. "
-    "Write only the next turn in the chat.\n\n"
-    "CONVERSATION:\n\n"
-)
+SESSION_SUMMARY_PROMPT = """
+Previous conversations between %s and %s so far can be summarized as follows: %s. The current time and date are %s. %s and %s just had the following conversation:
 
-SESSION_SUMMARY_PROMPT = (
-    "Previous conversations between %s and %s so far can be summarized as follows: %s. "
-    "The current time and date are %s. %s and %s just had the following conversation:\n\n"
-    "%s\n\n"
-    "Summarize the previous and current conversations between %s and %s in 150 words or less. "
-    "Include key facts about both speakers and time references.\n\n"
-)
+%s
 
-SESSION_SUMMARY_INIT_PROMPT = (
-    "Write a concise summary containing key facts mentioned about %s and %s on %s "
-    "in the following conversation:\n\n"
-    "%s\n\n"
-)
+Summarize the previous and current conversations between %s and %s in 150 words or less. Include key facts about both speakers and time references.
+"""
+
+SESSION_SUMMARY_INIT_PROMPT = """
+Write a concise summary containing key facts mentioned about %s and %s on %s in the following conversation:
+
+%s
+"""
 
 
 def get_msc_persona(args):
@@ -139,8 +99,7 @@ def get_msc_persona(args):
     return agent_a, agent_b
 
 
-def get_persona(args, attributes, target='human', ref_age=None):
-
+def get_persona(args, attributes):
     task = json.load(open(os.path.join(args.prompt_dir, 'persona_generation_examples.json')))
     persona_examples = [task["input_prefix"] + json.dumps(e["input"], indent=2) + '\n' + task["output_prefix"] + e["output"] for e in task['examples']]
     input_string = task["input_prefix"] + json.dumps(attributes, indent=2)
@@ -163,14 +122,11 @@ def get_persona(args, attributes, target='human', ref_age=None):
         pass
     else:
         raise TypeError
-    
-    # print(output)
 
     return output
 
 
 def get_datetime_string(input_time='', input_date=''):
-
     assert input_time or input_date
 
     if input_date:
@@ -190,13 +146,11 @@ def get_datetime_string(input_time='', input_date=''):
 
 
 def replace_captions(text, args):
-
     text = text.replace('[END]', '')
     text = re.sub(r"\[[^\]]*\]", "", text)
     return text.strip()
 
 def clean_dialog(output, name):
-
     if output.startswith(name):
         output = output[len(name):]
         output = output.strip()
@@ -208,7 +162,6 @@ def clean_dialog(output, name):
 
 
 def clean_json_output(output_string):
-
     print(output_string)
 
     output_string = output_string.strip()

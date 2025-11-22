@@ -18,7 +18,6 @@ logging.basicConfig(level=logging.INFO)
 
 
 def parse_args():
-
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--out-dir', required=True, type=str, help="Path to directory containing agent files and downloaded images for a conversation")
@@ -61,7 +60,6 @@ def is_ai_agent(speaker):
 
 
 def save_agents(agents, args):
-
     agent_a, agent_b = agents
     logging.info("Saving updated Agent A to %s" % args.agent_a_file)
     with open(args.agent_a_file, 'w') as f:
@@ -79,7 +77,6 @@ def load_agents(args):
 
 
 def load_events_metadata(events_path):
-
     if not os.path.exists(events_path):
         logging.info("No events file found at %s; skipping event prefill.", events_path)
         return None
@@ -104,7 +101,6 @@ def load_events_metadata(events_path):
 
 
 def assign_events_to_sessions(events, num_sessions, max_turns_per_session, start_session):
-
     sessions = list(range(start_session, num_sessions + 1))
     odd_turns = [turn for turn in range(1, max_turns_per_session + 1, 2)]
 
@@ -141,7 +137,6 @@ def assign_events_to_sessions(events, num_sessions, max_turns_per_session, start
 
 
 def build_event_turn(event, agent_name, session_id, turn_number, args):
-
     text = event.get("text", "") or ""
     clean_text = replace_captions(text, args) if text else ""
     img = event.get("img") or {}
@@ -160,7 +155,6 @@ def build_event_turn(event, agent_name, session_id, turn_number, args):
 
 
 def prepare_event_prefill(args, start_session):
-
     events_path = os.path.join(args.out_dir, 'events.json')
     metadata = load_events_metadata(events_path)
 
@@ -195,7 +189,6 @@ def prepare_event_prefill(args, start_session):
 
 
 def get_random_time():
-
     start_time = timedelta(hours=9, minutes=0, seconds=0)
     end_time = timedelta(hours=21, minutes=59, seconds=59)
     random_seconds = random.randint(start_time.total_seconds(), end_time.total_seconds())
@@ -212,7 +205,6 @@ def datetimeStr2Obj(dateStr):
     return datetimeObj
 
 def datetimeObj2Str(datetimeObj):
-
     time_mod = 'am' if datetimeObj.hour <= 12 else 'pm'
     hour = datetimeObj.hour if datetimeObj.hour <= 12 else datetimeObj.hour-12
     min = str(datetimeObj.minute).zfill(2)
@@ -224,7 +216,6 @@ def dateObj2Str(dateObj):
 
 
 def get_random_date():
-
     # initializing dates ranges
     test_date1, test_date2 = date(2022, 1, 1), date(2023, 6, 1)
     # getting days between dates
@@ -236,7 +227,6 @@ def get_random_date():
 
 
 def get_session_summary(session, speaker_1, speaker_2, curr_date, previous_summary=""):
-
     session_query = ''
     for c in session:
         session_query += "%s: %s\n" % (c["speaker"], c["text"])
@@ -258,7 +248,6 @@ def get_session_summary(session, speaker_1, speaker_2, curr_date, previous_summa
 
 
 def get_all_session_summary(speaker, curr_sess_id):
-
     summary = "\n"
     for sess_id in range(1, curr_sess_id):
         sess_date = speaker['session_%s_date_time' % sess_id]
@@ -309,48 +298,15 @@ def catch_date(date_str):
         return datetime.strptime(date_str, date_format2)
 
 
-def get_agent_query(speaker_1, speaker_2, curr_sess_id=0, 
-                    prev_sess_date_time='', curr_sess_date_time='', 
-                    use_events=False, instruct_stop=False, dialog_id=0, last_dialog='', embeddings=None, reflection=False):
-
-    # if curr_sess_id == 1:
-    #     speaker_is_ai = is_ai_agent(speaker_1)
-    #     if speaker_is_ai:
-    #         query = AGENT_CONV_PROMPT_SESS_1 % (
-    #             speaker_1['persona_summary'],
-    #             curr_sess_date_time,
-    #             speaker_1['name'], speaker_2['name']
-    #         )
-    #     else:
-    #         query = USER_CONV_PROMPT_SESS_1 % (
-    #             speaker_1['persona_summary'],
-    #             curr_sess_date_time,
-    #             speaker_1['name']
-    #         )
-    # else:
-    #     summary = get_all_session_summary(speaker_1, curr_sess_id)
-    #     speaker_is_ai = is_ai_agent(speaker_1)
-    #     if speaker_is_ai:
-    #         query = AGENT_CONV_PROMPT % (
-    #             speaker_1['persona_summary'],
-    #             speaker_1['name'], speaker_2['name'], prev_sess_date_time, summary,
-    #             curr_sess_date_time, speaker_1['name'], speaker_2['name']
-    #         )
-    #     else:
-    #         query = USER_CONV_PROMPT % (
-    #             speaker_1['persona_summary'],
-    #             speaker_1['name'], prev_sess_date_time, summary,
-    #             curr_sess_date_time, speaker_1['name']
-    #         )
-
+def get_agent_query(speaker_1, speaker_2, curr_sess_id=0):
     summary = get_all_session_summary(speaker_1, curr_sess_id)
     speaker_is_ai = is_ai_agent(speaker_1)
     if speaker_is_ai:
-        query = AGENT_CONV_PROMPT_V2 % (
+        query = AGENT_CONV_PROMPT % (
             speaker_2['name'],
         )
     else:
-        query = USER_CONV_PROMPT_V2 % (
+        query = USER_CONV_PROMPT % (
             speaker_1['name'],
             speaker_1['persona_summary'],
             summary,
@@ -360,7 +316,6 @@ def get_agent_query(speaker_1, speaker_2, curr_sess_id=0,
 
 
 def prepare_session_state(agent_a, agent_b, initial_session=None):
-
     if not initial_session:
         return [], 0, f"{agent_a['name']}: ", 0, False, False, {}
 
@@ -438,8 +393,7 @@ def apply_turn_side_effects(turn, session, conv_so_far, agent_a, agent_b):
     return conv_so_far, break_next_a, break_next_b, next_speaker_flag
 
 
-def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time_string='', curr_sess_id=0, reflection=False, initial_session=None):
-    
+def get_session(agent_a, agent_b, args, curr_sess_id=0, initial_session=None):
     # load embeddings for retrieveing relevat observations from previous conversations
     if curr_sess_id == 1:
         embeddings = None
@@ -471,15 +425,9 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
             continue
 
         if curr_speaker == 0:
-            agent_query = get_agent_query(agent_a, agent_b, prev_sess_date_time=prev_date_time_string, curr_sess_date_time=curr_date_time_string,
-                                    curr_sess_id=curr_sess_id, use_events=False, instruct_stop=i>=stop_dialog_count, 
-                                    dialog_id=i, last_dialog='' if i == 0 else session[-1]['speaker'] + ' says, ' + (session[-1].get('text') or ''), 
-                                    embeddings=embeddings, reflection=reflection)
+            agent_query = get_agent_query(agent_a, agent_b, curr_sess_id=curr_sess_id)
         else:
-            agent_query = get_agent_query(agent_b, agent_a, prev_sess_date_time=prev_date_time_string, curr_sess_date_time=curr_date_time_string,
-                                    curr_sess_id=curr_sess_id, use_events=False, instruct_stop=i>=stop_dialog_count, 
-                                    dialog_id=i, last_dialog='' if i == 0 else session[-1]['speaker'] + ' says, ' + (session[-1].get('text') or ''), 
-                                    embeddings=embeddings, reflection=reflection)
+            agent_query = get_agent_query(agent_b, agent_a, curr_sess_id=curr_sess_id)
         
         output = run_chatgpt(agent_query + conv_so_far, 1, 100, 'chatgpt', temperature=1.2)
         output = output.strip().split('\n')[0]
@@ -493,13 +441,9 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
         output["dia_id"] = 'D%s:%s' % (curr_sess_id, i+1)
         session.append(output)
 
-        # print(output)
         print("############ ", agent_a['name'] if curr_speaker == 0 else agent_b['name'], ': ', output["text"])
         
-        # conv_so_far = conv_so_far + output["text"] + '\n'
         conv_so_far = conv_so_far + output["text"] + '\n'
-
-
 
         if output['text'].endswith('[END]'):
             if curr_speaker == 0:
@@ -514,7 +458,6 @@ def get_session(agent_a, agent_b, args, prev_date_time_string='', curr_date_time
 
 
 def main():
-
     # get arguments
     args = parse_args()
 
@@ -603,8 +546,7 @@ def main():
                 initial_session = deepcopy(agent_a[curr_session_key])
 
             session = get_session(agent_a, agent_b, args,
-                                  prev_date_time_string=prev_date_time_string, curr_date_time_string=curr_date_time_string, 
-                                  curr_sess_id=j, reflection=args.reflection,
+                                  curr_sess_id=j,
                                   initial_session=initial_session)
             
             agent_a[curr_session_key] = session

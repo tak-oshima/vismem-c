@@ -554,6 +554,10 @@ def main():
 
             save_agents([agent_a, agent_b], args)
 
+            if events_metadata and j in event_session_map:
+                with open(events_metadata["path"], 'w') as f:
+                    json.dump(events_metadata["data"], f, indent=2)
+
             if 'session_%s_facts' % j not in agent_a or args.overwrite_session:
 
                 facts = get_session_facts(args, agent_a, agent_b, j)

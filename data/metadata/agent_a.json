@@ -36,47 +36,5 @@
       "clean_text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case?",
       "dia_id": "D10:1"
     }
-  ],
-  "qa": [
-    {
-      "question": "How many cities has Justin visited abroad in 2024?",
-      "answer": "2",
-      "evidence": [
-        "D1:1","D3:1"
-      ],
-      "category": 1
-    },
-    {
-      "question": "Which city did Justin visit in June, 2024?",
-      "answer": "Paris",
-      "evidence": [
-        "D1:1"
-      ],
-      "category": 1
-    },
-    {
-      "question": "Which city did Justin visit in July, 2024?",
-      "answer": "London",
-      "evidence": [
-        "D3:1"
-      ],
-      "category": 1
-    },
-    {
-      "question": "How much was the Airpods Max Justin bought?",
-      "answer": "$779",
-      "evidence": [
-        "D10:1"
-      ],
-      "category": 1
-    },
-    {
-      "question": "Which store at which location did Justin buy the Airpods Max from?",
-      "answer": "Apple Store, Pioneer Place",
-      "evidence": [
-        "D10:1"
-      ],
-      "category": 1
-    }
   ]
 }

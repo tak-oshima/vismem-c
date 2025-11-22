@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "text": "Just took this photo on my vacation! [shares a photo of eiffel tower]",
+      "img": {
+        "id": 1,
+        "url": "https://media.cntraveler.com/photos/58de89946c3567139f9b6cca/16:9/w_2560%2Cc_limit/GettyImages-468366251.jpg",
+        "prompt": "A photo of the Eiffel Tower in Paris, France"
+      }
+    },
+    {
+      "text": "I'm on vacation again! Here's a photo I took this morning! [shares a photo of big ben]",
+      "img": {
+        "id": 2,
+        "url": "https://explorial.com/wp-content/uploads/2024/05/Point-3.png",
+        "prompt": "A photo of Big Ben in London, England"
+      }
+    },
+    {
+      "text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case? [shares a photo of the receipt]",
+      "img": {
+        "id": 3,
+        "url": "https://www.receiptfaker.com/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Freceipt-faker-bbe70.firebasestorage.app%2Fo%2Fimages%252Fa2x58BESwAttWzYqqmwX%252Fa2x58BESwAttWzYqqmwX-f78cff54-5d2b-448b-8538-088a0516aaea.png%3Falt%3Dmedia%26token%3D959d5617-d646-4461-8543-da0fed6c3c9e&w=640&q=100",
+        "prompt": "A photo of a receipt for the Airpods Max purchase, at the Apple Store in Pioneer Place. Purchase total amount is $779."
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "question": "How many cities has Justin visited abroad in 2024?",
+    "answer": "2",
+    "evidence": [],
+    "category": 1
+  },
+  {
+    "question": "Which city did Justin visit in June, 2024?",
+    "answer": "Paris",
+    "evidence": [],
+    "category": 1
+  },
+  {
+    "question": "Which city did Justin visit in July, 2024?",
+    "answer": "London",
+    "evidence": [],
+    "category": 1
+  },
+  {
+    "question": "How much was the Airpods Max Justin bought?",
+    "answer": "$779",
+    "evidence": [],
+    "category": 1
+  },
+  {
+    "question": "Which store at which location did Justin buy the Airpods Max from?",
+    "answer": "Apple Store, Pioneer Place",
+    "evidence": [],
+    "category": 1
+  }
+]

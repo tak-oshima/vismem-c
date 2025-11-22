@@ -1,40 +1,4 @@
-  {
+{
   "name": "Justin",
-  "persona_summary": "Justin is a 31 year old asian man working as a software engineer at American Airlines in Dallas. He likes to watch movies and TV shows on the weekends, and he likes to travel to different countries occasionally.",
-  "session_1_date_time": "10:02 am on 7 June, 2024",
-  "session_1": [
-    {
-      "speaker": "Justin",
-      "text": "Just took this photo on my vacation! [shares a photo of eiffel tower]",
-      "img_url": [
-        "https://media.cntraveler.com/photos/58de89946c3567139f9b6cca/16:9/w_2560%2Cc_limit/GettyImages-468366251.jpg"
-      ],
-      "clean_text": "Just took this photo on my vacation!",
-      "dia_id": "D1:1"
-    }
-  ],
-  "session_3_date_time": "09:15 am on 15 July, 2024",
-  "session_3": [
-    {
-      "speaker": "Justin",
-      "text": "I'm on vacation again! Here's a photo I took this morning! [shares a photo of big ben]",
-      "img_url": [
-        "https://explorial.com/wp-content/uploads/2024/05/Point-3.png"
-      ],
-      "clean_text": "I'm on vacation again! Here's a photo I took this morning!",
-      "dia_id": "D3:1"
-    }
-  ],
-  "session_10_date_time": "11:02 am on 10 May, 2025",
-  "session_10": [
-    {
-      "speaker": "Justin",
-      "text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case? [shares a photo of the receipt]",
-      "img_url": [
-        "https://www.receiptfaker.com/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Freceipt-faker-bbe70.firebasestorage.app%2Fo%2Fimages%252Fa2x58BESwAttWzYqqmwX%252Fa2x58BESwAttWzYqqmwX-f78cff54-5d2b-448b-8538-088a0516aaea.png%3Falt%3Dmedia%26token%3D959d5617-d646-4461-8543-da0fed6c3c9e&w=640&q=100"
-      ],
-      "clean_text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case?",
-      "dia_id": "D10:1"
-    }
-  ]
+  "persona_summary": "Justin is a 31 year old asian man working as a software engineer at American Airlines in Dallas. He likes to watch movies and TV shows on the weekends, and he likes to travel to different countries occasionally."
 }

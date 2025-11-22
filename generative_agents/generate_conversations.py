@@ -5,6 +5,7 @@ import logging
 import argparse
 import os, json, sys
 import random
+from collections import defaultdict
 from copy import deepcopy
 from datetime import date, timedelta, datetime
 from generative_agents.conversation_utils import *
@@ -75,6 +76,122 @@ def load_agents(args):
     agent_a = json.load(open(args.agent_a_file))
     agent_b = json.load(open(args.agent_b_file))
     return agent_a, agent_b
+
+
+def load_events_metadata(events_path):
+
+    if not os.path.exists(events_path):
+        logging.info("No events file found at %s; skipping event prefill.", events_path)
+        return None
+
+    with open(events_path, 'r') as f:
+        data = json.load(f)
+
+    events = data.get('events', [])
+    if not isinstance(events, list):
+        logging.warning("Events file %s has unexpected format. Expected 'events' to be a list.", events_path)
+        events = []
+
+    for event in events:
+        event.pop('session_date_time', None)
+        event.pop('dia_id', None)
+
+    return {
+        "path": events_path,
+        "data": data,
+        "events": events,
+    }
+
+
+def assign_events_to_sessions(events, num_sessions, max_turns_per_session, start_session):
+
+    sessions = list(range(start_session, num_sessions + 1))
+    odd_turns = [turn for turn in range(1, max_turns_per_session + 1, 2)]
+
+    if not odd_turns:
+        raise ValueError("max_turns_per_session must be at least 1 to schedule events.")
+
+    available_slots = [(session, turn) for session in sessions for turn in odd_turns]
+
+    if len(events) > len(available_slots):
+        raise ValueError(
+            "Not enough odd-numbered turn slots to schedule all events. "
+            f"{len(events)} events but only {len(available_slots)} available slots."
+        )
+
+    random.shuffle(available_slots)
+
+    assignments = []
+    for idx, _ in enumerate(events):
+        session, turn = available_slots[idx]
+        assignments.append({
+            "index": idx,
+            "session": session,
+            "turn": turn,
+        })
+
+    session_map = defaultdict(list)
+    for assignment in assignments:
+        session_map[assignment["session"]].append((assignment["turn"], assignment["index"]))
+
+    for session_id in session_map:
+        session_map[session_id].sort(key=lambda item: item[0])
+
+    return assignments, session_map
+
+
+def build_event_turn(event, agent_name, session_id, turn_number, args):
+
+    text = event.get("text", "") or ""
+    clean_text = replace_captions(text, args) if text else ""
+    img = event.get("img") or {}
+    img_url = img.get("url") if isinstance(img, dict) else None
+
+    turn = {
+        "speaker": agent_name,
+        "text": text,
+        "clean_text": clean_text,
+        "dia_id": f"D{session_id}:{turn_number}",
+    }
+
+    turn["img_url"] = [img_url] if img_url else []
+
+    return turn
+
+
+def prepare_event_prefill(args, start_session):
+
+    events_path = os.path.join(args.out_dir, 'events.json')
+    metadata = load_events_metadata(events_path)
+
+    if not metadata:
+        return None
+
+    events = metadata["events"]
+    if not events:
+        logging.info("Events file %s is empty; nothing to prefill.", events_path)
+        return {
+            "metadata": metadata,
+            "assignments": [],
+            "session_map": defaultdict(list),
+        }
+
+    try:
+        assignments, session_map = assign_events_to_sessions(
+            events,
+            args.num_sessions,
+            args.max_turns_per_session,
+            start_session,
+        )
+    except ValueError as exc:
+        logging.error("Failed to assign events to sessions: %s", exc)
+        raise
+
+    return {
+        "metadata": metadata,
+        "assignments": assignments,
+        "session_map": session_map,
+    }
 
 
 def get_random_time():
@@ -428,6 +545,15 @@ def main():
         if sync_session_datetimes(agent_a, agent_b):
             save_agents([agent_a, agent_b], args)
 
+        events_plan = prepare_event_prefill(args, args.start_session)
+        events_metadata = None
+        event_session_map = {}
+        events_list = []
+        if events_plan:
+            events_metadata = events_plan["metadata"]
+            event_session_map = events_plan["session_map"]
+            events_list = events_metadata["events"]
+
         # default start index is 1; if resuming conversation from a leter session, indicate in script arguments using --start-session
         for j in range(args.start_session, args.num_sessions+1):
 
@@ -458,6 +584,19 @@ def main():
             else:
                 curr_date_time_string = agent_a[curr_date_time_key]
                 curr_date_time = datetimeStr2Obj(curr_date_time_string)
+
+            session_prefill_turns = []
+            if j in event_session_map:
+                for turn_number, event_index in event_session_map[j]:
+                    event_obj = events_list[event_index]
+                    turn_payload = build_event_turn(event_obj, agent_a['name'], j, turn_number, args)
+                    session_prefill_turns.append(turn_payload)
+                    event_obj["session_date_time"] = curr_date_time_string
+                    event_obj["dia_id"] = turn_payload["dia_id"]
+
+                session_prefill_turns.sort(key=lambda turn: int(turn["dia_id"].split(":")[1]))
+                agent_a[curr_session_key] = session_prefill_turns
+                save_agents([agent_a, agent_b], args)
 
             initial_session = None
             if not args.overwrite_session and curr_session_key in agent_a:
@@ -506,6 +645,10 @@ def main():
                 agent_b['session_%s_summary' % j] = summary
 
                 save_agents([agent_a, agent_b], args)
+
+        if events_metadata:
+            with open(events_metadata["path"], 'w') as f:
+                json.dump(events_metadata["data"], f, indent=2)
 
     agent_a, agent_b = load_agents(args)
     convert_to_chat_html(agent_a, agent_b, outfile=os.path.join(args.out_dir, 'sessions.html'), use_events=False, img_dir=args.out_dir)

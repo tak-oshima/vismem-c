@@ -1,0 +1,59 @@
+{
+  "examples": [
+    {
+      "category": "Traveling",
+      "prompt": "Photo of an airport selfie with a sign reading 'PHX' at the terminal",
+      "metadata": {
+        "city": "Phoenix",
+        "state": "Arizona",
+        "location_type": "airport",
+        "location_name": "PHX",
+        "date": "2025-11-15"
+      },
+      "expected_text": ["PHX"]
+    },
+    {
+      "category": "Traveling",
+      "prompt": "Passport page showing an entry stamp for Japan dated July 3, 2023",
+      "metadata": {
+        "country": "Japan",
+        "date": "2023-07-03",
+        "entry_type": "stamp"
+      },
+      "expected_text": ["Japan", "03 JUL 2023"]
+    },
+    {
+      "category": "Food",
+      "prompt": "Photo of a bowl of udon noodles with a neon restaurant sign that reads 'Marugame Udon' in the background",
+      "metadata": {
+        "restaurant": "Marugame Udon",
+        "dish": "Nikutama",
+        "category": "food",
+        "date": "2025-08-22"
+      },
+      "expected_text": ["Marugame Udon"]
+    },
+    {
+      "category": "StructuredText",
+      "prompt": "Receipt from Target showing total $42.87 dated November 10, 2025",
+      "metadata": {
+        "store": "Target",
+        "total": "42.87",
+        "date": "2025-11-10",
+        "items": ["groceries"]
+      },
+      "expected_text": ["Target", "42.87", "11/10/2025"]
+    },
+    {
+      "category": "FridgePantry",
+      "prompt": "Close-up photo of milk jug with expiration date 'EXP 12/15/2025' visible on label",
+      "metadata": {
+        "item": "milk",
+        "brand": "Organic Valley",
+        "date": "2025-12-15",
+        "size": "1 gallon"
+      },
+      "expected_text": ["12/15/2025", "EXP"]
+    }
+  ]
+}

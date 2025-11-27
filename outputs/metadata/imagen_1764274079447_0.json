@@ -1,0 +1,14 @@
+{
+  "category": "Hobby",
+  "hobby_type": "photography",
+  "item": "camera",
+  "location": "Yosemite",
+  "date": "2025-03-12",
+  "expected_text": [
+    "Yosemite"
+  ],
+  "prompt": "Photorealistic outdoor adventure photograph. A photographer with camera at a scenic overlook with mountains visible. A sign, marker, or engraved plaque in the scene clearly shows the location name \"Yosemite\" in readable text. Bright natural daylight, sharp focus on both the person and the location marker. Detailed scenic background landscape with realistic colors, professional travel/adventure photography, no illustration or cartoon.",
+  "filepath": "outputs/images/imagen_1764274079447_0.png",
+  "generation_time": 7.05047607421875,
+  "backend": "imagen"
+}

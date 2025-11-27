@@ -1,0 +1,15 @@
+{
+  "category": "StructuredText",
+  "type": "receipt",
+  "store": "Safeway",
+  "total": "81.90",
+  "date": "2025-06-12",
+  "expected_text": [
+    "Safeway",
+    "81.90"
+  ],
+  "prompt": "Receipt from Safeway showing total $81.90 dated June 12, 2025",
+  "filepath": "outputs/images\\openai_1763679123163_0.png",
+  "generation_time": 10.38812804222107,
+  "backend": "openai"
+}

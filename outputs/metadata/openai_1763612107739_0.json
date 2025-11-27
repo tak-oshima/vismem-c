@@ -1,0 +1,14 @@
+{
+  "category": "Food",
+  "restaurant": "Olive Garden",
+  "dish": "Orange Chicken",
+  "city": "Chicago",
+  "date": "2025-08-19",
+  "expected_text": [
+    "Olive Garden"
+  ],
+  "prompt": "Photo of Orange Chicken with visible Olive Garden sign or menu in background",
+  "filepath": "outputs/images\\openai_1763612107739_0.png",
+  "generation_time": 12.991529703140259,
+  "backend": "openai"
+}

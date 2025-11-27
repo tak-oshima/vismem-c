@@ -1,0 +1,260 @@
+{
+  "total_images": 12,
+  "ocr_passes": 0,
+  "ocr_fails": 12,
+  "ocr_pass_rate": 0.0,
+  "avg_generation_time": 322.20202962557477,
+  "avg_file_size_mb": 1.39,
+  "results": [
+    {
+      "filename": "openai_1763679137673_0.png",
+      "filepath": "outputs/images/openai_1763679137673_0.png",
+      "category": "Traveling",
+      "prompt": "Photo of a highway sign with a sign reading 'Grand Canyon'",
+      "generation_time": 13.943901062011719,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.82,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Grand Canyon"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Grand Canyon"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "sd_1763607554830_0.png",
+      "filepath": "outputs/images/sd_1763607554830_0.png",
+      "category": "Traveling",
+      "prompt": "Photo of a train station with a sign reading 'Grand Canyon'",
+      "generation_time": 1400.2537772655487,
+      "backend": "stable_diffusion",
+      "dimensions": "512x512",
+      "file_size_mb": 0.41,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Grand Canyon"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Grand Canyon"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "sd_1763606154442_0.png",
+      "filepath": "outputs/images/sd_1763606154442_0.png",
+      "category": "Food",
+      "prompt": "Photo of Double-Double with visible In-N-Out Burger sign or menu in background",
+      "generation_time": 1181.075672864914,
+      "backend": "stable_diffusion",
+      "dimensions": "512x512",
+      "file_size_mb": 0.37,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "In-N-Out Burger"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "In-N-Out Burger"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1763679112238_0.png",
+      "filepath": "outputs/images/openai_1763679112238_0.png",
+      "category": "Hobby",
+      "prompt": "Photo of a person holding 8 lb bass at Lake Tahoe",
+      "generation_time": 17.25120258331299,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.72,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Lake Tahoe"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Lake Tahoe"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1763612094152_0.png",
+      "filepath": "outputs/images/openai_1763612094152_0.png",
+      "category": "StructuredText",
+      "prompt": "Receipt from Walmart showing total $145.81 dated September 11, 2025",
+      "generation_time": 10.154258012771606,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.69,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Walmart",
+        "145.81"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Walmart",
+        "145.81"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "sd_1763604972141_0.png",
+      "filepath": "outputs/images/sd_1763604972141_0.png",
+      "category": "Hobby",
+      "prompt": "Photo of a person holding camera at Yosemite",
+      "generation_time": 1164.6342539787292,
+      "backend": "stable_diffusion",
+      "dimensions": "512x512",
+      "file_size_mb": 0.55,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Yosemite"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Yosemite"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1763679123163_0.png",
+      "filepath": "outputs/images/openai_1763679123163_0.png",
+      "category": "StructuredText",
+      "prompt": "Receipt from Safeway showing total $81.90 dated June 12, 2025",
+      "generation_time": 10.38812804222107,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 2.17,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Safeway",
+        "81.90"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Safeway",
+        "81.90"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1763612107739_0.png",
+      "filepath": "outputs/images/openai_1763612107739_0.png",
+      "category": "Food",
+      "prompt": "Photo of Orange Chicken with visible Olive Garden sign or menu in background",
+      "generation_time": 12.991529703140259,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.42,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Olive Garden"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Olive Garden"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1764122645939_0.png",
+      "filepath": "outputs/images/openai_1764122645939_0.png",
+      "category": "Hobby",
+      "prompt": "Professional outdoor adventure photograph. A fisherman proudly displaying a caught fish, clear scenic mountain lake background. Location name 'Lake Tahoe' is clearly visible on a sign or landmark in the image. The landmark text is readable and legible. Bright natural daylight, high-quality outdoor photography. Sharp focus on the person and location marker. Scenic background landscape is clear and detailed. Professional travel and adventure photography quality. High resolution, vibrant natural colors, excellent detail and clarity. Location name is prominently displayed and easily readable in the scene.",
+      "generation_time": 12.590971946716309,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.68,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Lake Tahoe"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Lake Tahoe"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1763612083243_0.png",
+      "filepath": "outputs/images/openai_1763612083243_0.png",
+      "category": "Traveling",
+      "prompt": "Passport page showing an entry stamp for Italy dated June 08, 2025",
+      "generation_time": 14.383031129837036,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.83,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Italy"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Italy"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1764122618603_0.png",
+      "filepath": "outputs/images/openai_1764122618603_0.png",
+      "category": "StructuredText",
+      "prompt": "A detailed, high-quality photograph of a retail receipt from Walgreens. The receipt is displayed flat on a neutral surface with excellent lighting. The Walgreens store name logo is prominently visible at the top in clear, readable print. The total amount $111.66 is clearly printed and legible in large text. The date 05/29/2025 is clearly visible and readable on the receipt. High contrast black text on white receipt paper. Professional macro photography with sharp focus across the entire receipt. Bright, even lighting with no shadows on the text. All text is crisp, clear, and easily readable. Receipt items and pricing details are legible. High resolution, sharp detail, professional document photography quality.",
+      "generation_time": 15.004354000091553,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.73,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "Walgreens",
+        "111.66",
+        "05/29/2025"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "Walgreens",
+        "111.66",
+        "05/29/2025"
+      ],
+      "match_rate": 0.0
+    },
+    {
+      "filename": "openai_1764122632825_0.png",
+      "filepath": "outputs/images/openai_1764122632825_0.png",
+      "category": "FridgePantry",
+      "prompt": "Close-up professional product photograph of a milk carton. The Organic Valley branded label is clearly visible and readable. The expiration date is prominently displayed on the front of the product label. Expiration date text reads 'EXP 12/17/2025' in large, bold, legible print. High-contrast black or dark text on light background (label). The date is in sharp focus with excellent detail and clarity. Bright professional lighting with no glare on the label. Macro photography style with shallow depth of field, date label in sharp focus. Product is positioned to showcase the expiration date label clearly. High resolution, crisp text, easily readable date information. White or neutral background, professional product photography lighting.",
+      "generation_time": 13.753274917602539,
+      "backend": "openai",
+      "dimensions": "1024x1024",
+      "file_size_mb": 1.29,
+      "format": "PNG",
+      "ocr_success": false,
+      "expected_texts": [
+        "12/17/2025",
+        "EXP"
+      ],
+      "found_texts": [],
+      "missing_texts": [
+        "12/17/2025",
+        "EXP"
+      ],
+      "match_rate": 0.0
+    }
+  ]
+}

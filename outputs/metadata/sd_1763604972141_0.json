@@ -1,0 +1,14 @@
+{
+  "category": "Hobby",
+  "hobby_type": "photography",
+  "item": "camera",
+  "location": "Yosemite",
+  "date": "2025-02-28",
+  "expected_text": [
+    "Yosemite"
+  ],
+  "prompt": "Photo of a person holding camera at Yosemite",
+  "filepath": "outputs/images\\sd_1763604972141_0.png",
+  "generation_time": 1164.6342539787292,
+  "backend": "stable_diffusion"
+}

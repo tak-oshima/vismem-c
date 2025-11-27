@@ -1,0 +1,14 @@
+{
+  "category": "Food",
+  "restaurant": "In-N-Out Burger",
+  "dish": "Double-Double",
+  "city": "Chicago",
+  "date": "2025-04-10",
+  "expected_text": [
+    "In-N-Out Burger"
+  ],
+  "prompt": "Photo of Double-Double with visible In-N-Out Burger sign or menu in background",
+  "filepath": "outputs/images\\sd_1763606154442_0.png",
+  "generation_time": 1181.075672864914,
+  "backend": "stable_diffusion"
+}

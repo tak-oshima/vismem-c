@@ -1,0 +1,68 @@
+{
+  "Traveling": {
+    "templates": [
+      {
+        "prompt": "Photo of a {location_type} with a sign reading '{location_name}'",
+        "fields": ["location_type", "location_name", "date", "city", "state"]
+      },
+      {
+        "prompt": "Passport page showing an entry stamp for {country} dated {date}",
+        "fields": ["country", "date", "passport_number"]
+      },
+      {
+        "prompt": "Selfie at {location_name} {location_type} with visible signage",
+        "fields": ["location_name", "location_type", "city", "date"]
+      }
+    ],
+    "location_types": ["airport", "train station", "highway sign", "border crossing", "landmark"],
+    "locations": ["PHX Airport", "Grand Canyon", "Statue of Liberty", "Golden Gate Bridge"]
+  },
+  "Hobby": {
+    "templates": [
+      {
+        "prompt": "Photo of a {person} holding a {item} at {location}",
+        "fields": ["hobby_type", "item", "location", "date", "measurement"]
+      },
+      {
+        "prompt": "Close-up of a {item} with visible {detail}",
+        "fields": ["hobby_type", "item", "detail", "date"]
+      }
+    ]
+  },
+  "Food": {
+    "templates": [
+      {
+        "prompt": "Photo of {dish} with visible {restaurant} sign or menu in background",
+        "fields": ["restaurant", "dish", "date", "city"]
+      },
+      {
+        "prompt": "Close-up of {food_item} on a plate at {location}",
+        "fields": ["food_item", "location", "date"]
+      }
+    ]
+  },
+  "StructuredText": {
+    "templates": [
+      {
+        "prompt": "Receipt from {store} showing total ${total} dated {date}",
+        "fields": ["store", "total", "date", "items"]
+      },
+      {
+        "prompt": "Highway sign showing '{text}' for {location}",
+        "fields": ["text", "location", "state", "date"]
+      }
+    ]
+  },
+  "FridgePantry": {
+    "templates": [
+      {
+        "prompt": "Close-up photo of {item} with expiration date {date} visible on label",
+        "fields": ["item", "date", "quantity"]
+      },
+      {
+        "prompt": "Photo of {item} carton showing best by date {date}",
+        "fields": ["item", "brand", "date", "size"]
+      }
+    ]
+  }
+}

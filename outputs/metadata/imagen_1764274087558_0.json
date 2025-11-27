@@ -1,0 +1,14 @@
+{
+  "category": "Food",
+  "restaurant": "Olive Garden",
+  "dish": "Nikutama",
+  "city": "New York",
+  "date": "2025-08-11",
+  "expected_text": [
+    "Olive Garden"
+  ],
+  "prompt": "Photorealistic restaurant food photograph of Nikutama on a plate in the foreground. In the background, the restaurant name \"Olive Garden\" appears on a sign, menu, or wall and is clearly readable. Sharp focus on the dish, with the restaurant branding also in focus and easy to read. Natural, bright but realistic lighting (indoor restaurant or daylight from windows), high resolution, crisp details, vibrant but true-to-life colors. Professional food photography, no illustration, no cartoon, no CGI.",
+  "filepath": "outputs/images/imagen_1764274087558_0.png",
+  "generation_time": 7.5827109813690186,
+  "backend": "imagen"
+}

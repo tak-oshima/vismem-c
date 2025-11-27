@@ -1,0 +1,16 @@
+{
+  "category": "StructuredText",
+  "type": "receipt",
+  "store": "Walgreens",
+  "total": "111.66",
+  "date": "2025-05-29",
+  "expected_text": [
+    "Walgreens",
+    "111.66",
+    "05/29/2025"
+  ],
+  "prompt": "A detailed, high-quality photograph of a retail receipt from Walgreens. The receipt is displayed flat on a neutral surface with excellent lighting. The Walgreens store name logo is prominently visible at the top in clear, readable print. The total amount $111.66 is clearly printed and legible in large text. The date 05/29/2025 is clearly visible and readable on the receipt. High contrast black text on white receipt paper. Professional macro photography with sharp focus across the entire receipt. Bright, even lighting with no shadows on the text. All text is crisp, clear, and easily readable. Receipt items and pricing details are legible. High resolution, sharp detail, professional document photography quality.",
+  "filepath": "outputs/images/openai_1764122618603_0.png",
+  "generation_time": 15.004354000091553,
+  "backend": "openai"
+}

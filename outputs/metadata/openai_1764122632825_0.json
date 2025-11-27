@@ -1,0 +1,14 @@
+{
+  "category": "FridgePantry",
+  "item": "milk carton",
+  "brand": "Organic Valley",
+  "date": "2025-12-17",
+  "expected_text": [
+    "12/17/2025",
+    "EXP"
+  ],
+  "prompt": "Close-up professional product photograph of a milk carton. The Organic Valley branded label is clearly visible and readable. The expiration date is prominently displayed on the front of the product label. Expiration date text reads 'EXP 12/17/2025' in large, bold, legible print. High-contrast black or dark text on light background (label). The date is in sharp focus with excellent detail and clarity. Bright professional lighting with no glare on the label. Macro photography style with shallow depth of field, date label in sharp focus. Product is positioned to showcase the expiration date label clearly. High resolution, crisp text, easily readable date information. White or neutral background, professional product photography lighting.",
+  "filepath": "outputs/images/openai_1764122632825_0.png",
+  "generation_time": 13.753274917602539,
+  "backend": "openai"
+}

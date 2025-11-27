@@ -1,0 +1,13 @@
+{
+  "category": "Traveling",
+  "date": "2025-06-08",
+  "expected_text": [
+    "Italy"
+  ],
+  "country": "Italy",
+  "passport_number": "US13307279",
+  "prompt": "Passport page showing an entry stamp for Italy dated June 08, 2025",
+  "filepath": "outputs/images\\openai_1763612083243_0.png",
+  "generation_time": 14.383031129837036,
+  "backend": "openai"
+}

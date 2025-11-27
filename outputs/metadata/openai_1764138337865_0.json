@@ -1,0 +1,16 @@
+{
+  "category": "StructuredText",
+  "type": "receipt",
+  "store": "Target",
+  "total": "36.82",
+  "date": "2025-05-24",
+  "expected_text": [
+    "Target",
+    "36.82",
+    "05/24/2025"
+  ],
+  "prompt": "Photorealistic macro photograph of a paper retail receipt from \"Target\" lying flat on a neutral surface. The store name \"Target\" is printed clearly at the top of the receipt. The total amount \"$36.82\" and the date \"05/24/2025\" are large, sharp, and easy to read. High contrast black text on white receipt paper, edge-to-edge sharp focus with no blur. Bright, even lighting with no shadows or glare on the text. All printed lines and numbers are crisp and legible, professional document photography, no illustration or cartoon.",
+  "filepath": "outputs/images/openai_1764138337865_0.png",
+  "generation_time": 17.16281008720398,
+  "backend": "openai"
+}

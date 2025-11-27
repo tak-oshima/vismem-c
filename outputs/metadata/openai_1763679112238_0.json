@@ -1,0 +1,14 @@
+{
+  "category": "Hobby",
+  "hobby_type": "fishing",
+  "item": "8 lb bass",
+  "location": "Lake Tahoe",
+  "date": "2025-10-20",
+  "expected_text": [
+    "Lake Tahoe"
+  ],
+  "prompt": "Photo of a person holding 8 lb bass at Lake Tahoe",
+  "filepath": "outputs/images\\openai_1763679112238_0.png",
+  "generation_time": 17.25120258331299,
+  "backend": "openai"
+}

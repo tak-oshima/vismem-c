@@ -1,0 +1,15 @@
+{
+  "category": "Traveling",
+  "date": "2025-05-14",
+  "expected_text": [
+    "Grand Canyon"
+  ],
+  "location_type": "train station",
+  "location_name": "Grand Canyon",
+  "city": "Boston",
+  "state": "New York",
+  "prompt": "Photo of a train station with a sign reading 'Grand Canyon'",
+  "filepath": "outputs/images\\sd_1763607554830_0.png",
+  "generation_time": 1400.2537772655487,
+  "backend": "stable_diffusion"
+}

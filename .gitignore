@@ -1,0 +1,7 @@
+.venv/
+
+# Ignore common OS and build files
+__pycache__/
+*.pyc
+.DS_Store
+google-cloud-key.json

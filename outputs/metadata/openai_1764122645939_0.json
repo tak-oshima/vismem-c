@@ -1,0 +1,14 @@
+{
+  "category": "Hobby",
+  "hobby_type": "fishing",
+  "item": "8 lb bass",
+  "location": "Lake Tahoe",
+  "date": "2025-02-02",
+  "expected_text": [
+    "Lake Tahoe"
+  ],
+  "prompt": "Professional outdoor adventure photograph. A fisherman proudly displaying a caught fish, clear scenic mountain lake background. Location name 'Lake Tahoe' is clearly visible on a sign or landmark in the image. The landmark text is readable and legible. Bright natural daylight, high-quality outdoor photography. Sharp focus on the person and location marker. Scenic background landscape is clear and detailed. Professional travel and adventure photography quality. High resolution, vibrant natural colors, excellent detail and clarity. Location name is prominently displayed and easily readable in the scene.",
+  "filepath": "outputs/images/openai_1764122645939_0.png",
+  "generation_time": 12.590971946716309,
+  "backend": "openai"
+}

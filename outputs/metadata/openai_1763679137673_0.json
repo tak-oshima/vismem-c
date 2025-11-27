@@ -1,0 +1,15 @@
+{
+  "category": "Traveling",
+  "date": "2025-11-01",
+  "expected_text": [
+    "Grand Canyon"
+  ],
+  "location_type": "highway sign",
+  "location_name": "Grand Canyon",
+  "city": "San Francisco",
+  "state": "Massachusetts",
+  "prompt": "Photo of a highway sign with a sign reading 'Grand Canyon'",
+  "filepath": "outputs/images\\openai_1763679137673_0.png",
+  "generation_time": 13.943901062011719,
+  "backend": "openai"
+}

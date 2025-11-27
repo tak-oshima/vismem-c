@@ -1,0 +1,14 @@
+{
+  "category": "Food",
+  "restaurant": "Panda Express",
+  "dish": "Double-Double",
+  "city": "Chicago",
+  "date": "2025-07-01",
+  "expected_text": [
+    "Panda Express"
+  ],
+  "prompt": "Photorealistic restaurant food photograph of Double-Double on a plate in the foreground. In the background, the restaurant name \"Panda Express\" appears on a sign, menu, or wall and is clearly readable. Sharp focus on the dish, with the restaurant branding also in focus and easy to read. Natural, bright but realistic lighting (indoor restaurant or daylight from windows), high resolution, crisp details, vibrant but true-to-life colors. Professional food photography, no illustration, no cartoon, no CGI.",
+  "filepath": "outputs/images/imagen_1764274096360_0.png",
+  "generation_time": 8.320359945297241,
+  "backend": "imagen"
+}

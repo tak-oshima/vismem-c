@@ -1,0 +1,15 @@
+{
+  "category": "StructuredText",
+  "type": "receipt",
+  "store": "Walmart",
+  "total": "145.81",
+  "date": "2025-09-11",
+  "expected_text": [
+    "Walmart",
+    "145.81"
+  ],
+  "prompt": "Receipt from Walmart showing total $145.81 dated September 11, 2025",
+  "filepath": "outputs/images\\openai_1763612094152_0.png",
+  "generation_time": 10.154258012771606,
+  "backend": "openai"
+}

@@ -1,0 +1,16 @@
+{
+  "category": "StructuredText",
+  "type": "receipt",
+  "store": "Walmart",
+  "total": "131.72",
+  "date": "2025-06-05",
+  "expected_text": [
+    "Walmart",
+    "131.72",
+    "06/05/2025"
+  ],
+  "prompt": "Photorealistic macro photograph of a paper retail receipt from \"Walmart\" lying flat on a neutral surface. The store name \"Walmart\" is printed clearly at the top of the receipt. The total amount \"$131.72\" and the date \"06/05/2025\" are large, sharp, and easy to read. High contrast black text on white receipt paper, edge-to-edge sharp focus with no blur. Bright, even lighting with no shadows or glare on the text. All printed lines and numbers are crisp and legible, professional document photography, no illustration or cartoon.",
+  "filepath": "outputs/images/openai_1764138320216_0.png",
+  "generation_time": 14.256894826889038,
+  "backend": "openai"
+}

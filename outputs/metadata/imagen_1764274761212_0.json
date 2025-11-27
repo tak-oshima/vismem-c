@@ -1,0 +1,14 @@
+{
+  "category": "FridgePantry",
+  "item": "egg carton",
+  "brand": "Happy Egg Co",
+  "date": "2025-12-16",
+  "expected_text": [
+    "12/16/2025",
+    "EXP"
+  ],
+  "prompt": "Photorealistic close-up product photograph of a egg carton from the brand \"Happy Egg Co\". The product label clearly shows the expiration date text \"EXP 12/16/2025\" in the main area of the label. The expiration date text is in sharp focus and easy to read, with high contrast between text and background. Macro lens look with shallow depth of field, but the date text and brand logo are fully sharp and legible. Soft, even lighting with no glare or reflections on the label, neutral or simple fridge/interior background. Professional product photography, no illustration, no cartoon, no CGI.",
+  "filepath": "outputs/images/imagen_1764274761212_0.png",
+  "generation_time": 7.026017189025879,
+  "backend": "imagen"
+}

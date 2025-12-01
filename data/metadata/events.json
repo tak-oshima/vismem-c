@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "text": "Just took this photo on my vacation! [shares a photo of eiffel tower]",
+      "img": {
+        "id": 1,
+        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_0_imagen_1764620419506_0.png",
+        "prompt": "A photo of the Eiffel Tower in Paris, France"
+      },
+      "session_date_time": "11:39 pm on 3 May, 2022",
+      "dia_id": "D18:11"
+    },
+    {
+      "text": "I'm on vacation again! Here's a photo I took this morning! [shares a photo of big ben]",
+      "img": {
+        "id": 2,
+        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_1_imagen_1764620432464_0.png",
+        "prompt": "A photo of Big Ben in London, England"
+      },
+      "session_date_time": "5:26 pm on 12 May, 2022",
+      "dia_id": "D23:11"
+    },
+    {
+      "text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case? [shares a photo of the receipt]",
+      "img": {
+        "id": 3,
+        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_2_imagen_1764620440645_0.png",
+        "prompt": "A photo of a receipt for the Airpods Max purchase, at the Apple Store in Pioneer Place. Purchase total amount is $779."
+      },
+      "session_date_time": "10:37 pm on 6 April, 2022",
+      "dia_id": "D3:11"
+    }
+  ]
+}

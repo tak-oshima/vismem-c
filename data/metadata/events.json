@@ -1,7 +1,7 @@
 {
   "events": [
     {
-      "text": "Just took this photo on my vacation! [shares a photo of eiffel tower]",
+      "text": "Had an amazing trip! Got some great shots ",
       "img": {
         "id": 1,
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_0_imagen_1764620419506_0.png",
@@ -11,7 +11,7 @@
       "dia_id": "D18:11"
     },
     {
-      "text": "I'm on vacation again! Here's a photo I took this morning! [shares a photo of big ben]",
+      "text": "Back on vacation! Check out what I captured this morning",
       "img": {
         "id": 2,
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_1_imagen_1764620432464_0.png",
@@ -21,7 +21,7 @@
       "dia_id": "D23:11"
     },
     {
-      "text": "I recently bought the Airpods Max. Can you keep the receipt for me just in case? [shares a photo of the receipt]",
+      "text": "Got myself a new pair of earbuds. Store receipt attached",
       "img": {
         "id": 3,
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_2_imagen_1764620440645_0.png",
@@ -31,14 +31,14 @@
       "dia_id": "D3:11"
     },
     {
-      "text": "Just took this photo of the Statue of Liberty! [shares a photo of statue of liberty]",
+      "text": "Finally made it here! Got a nice picture",
       "img": {
         "id": 4,
         "prompt": "A photo of the Statue of Liberty in New York City, USA."
       }
     },
     {
-      "text": "Enjoying the view here! [shares a photo of the great wall of china]",
+      "text": "The scenery is unreal ",
       "img": {
         "id": 5,
         "prompt": "A photo of the Great Wall of China near Beijing, China.",
@@ -46,14 +46,15 @@
       }
     },
     {
-      "text": "Look where I am: the Taj Mahal! [shares a photo of taj mahal]",
+      "text": "Can't believe I'm finally here!",
       "img": {
         "id": 6,
-        "prompt": "A photo of the Taj Mahal in Agra, India."
+        "prompt": "A photo of the Taj Mahal in Agra, India.",
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/6.png"
       }
     },
     {
-      "text": "Check out the Colosseum. What a historic place! [shares a photo of the colosseum in rome]",
+      "text": "Just visited this incredible historical site. What a vibe!",
       "img": {
         "id": 7,
         "prompt": "A photo of the Colosseum in Rome, Italy.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "text": "Beautiful day at the Sydney Opera House. [shares a photo of sydney opera house]",
+      "text": "What a perfect day! The light was amazing",
       "img": {
         "id": 8,
         "prompt": "A photo of the Sydney Opera House in Sydney, Australia.",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "text": "Just reached Machu Picchu. Stunning view! [shares a photo of machu picchu]",
+      "text": "Made it! The hike was absolutely worth it",
       "img": {
         "id": 9,
         "prompt": "A photo of Machu Picchu in Peru.",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "text": "Had a great hike, here's a photo of the Grand Canyon! [shares a photo of grand canyon]",
+      "text": "Took the scenic route today, so worth it",
       "img": {
         "id": 10,
         "prompt": "A photo of the Grand Canyon in Arizona, USA.",
@@ -85,7 +86,7 @@
       }
     },
     {
-      "text": "We visited Niagara Falls today. Amazing sight! [shares a photo of niagara falls]",
+      "text": "We actually went! The power is mind-blowing",
       "img": {
         "id": 11,
         "prompt": "A photo of Niagara Falls on the border of USA and Canada.",
@@ -93,7 +94,7 @@
       }
     },
     {
-      "text": "On top of Corcovado mountain with Christ the Redeemer. [shares a photo of christ the redeemer statue]",
+      "text": "The view from up here is surreal",
       "img": {
         "id": 12,
         "prompt": "A photo of Christ the Redeemer statue in Rio de Janeiro, Brazil.",
@@ -101,7 +102,7 @@
       }
     },
     {
-      "text": "Exploring Giza today. [shares a photo of the great sphinx and pyramids of giza]",
+      "text": "Managed to visit this today. Speechless ",
       "img": {
         "id": 13,
         "prompt": "A photo of the Great Sphinx and Pyramids of Giza in Egypt.",
@@ -109,7 +110,7 @@
       }
     },
     {
-      "text": "Took this from near the summit of Mt. Kilimanjaro! [shares a photo of mount kilimanjaro]",
+      "text": "Finally reached the top area! Exhausted but happy",
       "img": {
         "id": 14,
         "prompt": "A photo of Mount Kilimanjaro in Tanzania.",
@@ -117,7 +118,7 @@
       }
     },
     {
-      "text": "Finally saw Mount Fuji. [shares a photo of mount fuji in japan]",
+      "text": "Spotted this iconic peak! Japan trip is complete",
       "img": {
         "id": 15,
         "prompt": "A photo of Mount Fuji in Japan.",
@@ -125,7 +126,7 @@
       }
     },
     {
-      "text": "The view from Table Mountain is incredible. [shares a photo of table mountain]",
+      "text": "Hiked up here, view is 100% worth the effort",
       "img": {
         "id": 16,
         "prompt": "A photo of Table Mountain in Cape Town, South Africa.",
@@ -133,7 +134,7 @@
       }
     },
     {
-      "text": "Enjoying the sunset in Santorini. [shares a photo of village of oia on santorini]",
+      "text": "Greece is absolutely beautiful. Watched the sun go down",
       "img": {
         "id": 17,
         "prompt": "A photo of the village of Oia on Santorini island, Greece, with white buildings and blue domes.",
@@ -141,7 +142,7 @@
       }
     },
     {
-      "text": "Dream castle in real life: Neuschwanstein Castle. [shares a photo of neuschwanstein castle]",
+      "text": "This place exceeded all my expectations",
       "img": {
         "id": 18,
         "prompt": "A photo of Neuschwanstein Castle in Bavaria, Germany.",
@@ -149,14 +150,15 @@
       }
     },
     {
-      "text": "Walking through Petra's ancient city. [shares a photo of al-khazneh at petra jordan]",
+      "text": "Walking through ancient history right now",
       "img": {
         "id": 19,
-        "prompt": "A photo of the Al-Khazneh temple at Petra, Jordan."
+        "prompt": "A photo of the Al-Khazneh temple at Petra, Jordan.",
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/19.png"
       }
     },
     {
-      "text": "Sunrise at Angkor Wat. [shares a photo of angkor wat temple in cambodia]",
+      "text": "Woke up early to catch the sunrise. So glad I did",
       "img": {
         "id": 20,
         "prompt": "A photo of the Angkor Wat temple in Cambodia.",
@@ -164,7 +166,7 @@
       }
     },
     {
-      "text": "Mount Rushmore looks even cooler in person. [shares a photo of mount rushmore]",
+      "text": "Crossed this one off my bucket list!",
       "img": {
         "id": 21,
         "prompt": "A photo of Mount Rushmore in South Dakota, USA.",
@@ -172,7 +174,7 @@
       }
     },
     {
-      "text": "Golden Gate Bridge at dawn. [shares a photo of golden gate bridge]",
+      "text": "Early morning walk, perfect weather today",
       "img": {
         "id": 22,
         "prompt": "A photo of the Golden Gate Bridge in San Francisco, USA.",
@@ -180,7 +182,7 @@
       }
     },
     {
-      "text": "Toronto skyline featuring CN Tower. [shares a photo of cn tower in toronto]",
+      "text": "Toronto is stunning! City skyline looks great from here",
       "img": {
         "id": 23,
         "prompt": "A photo of the CN Tower in Toronto, Canada.",
@@ -188,7 +190,7 @@
       }
     },
     {
-      "text": "Visiting the Acropolis. [shares a photo of parthenon on the acropolis athens]",
+      "text": "Exploring Athens today. The history is incredible",
       "img": {
         "id": 24,
         "prompt": "A photo of the Parthenon on the Acropolis in Athens, Greece.",
@@ -196,7 +198,7 @@
       }
     },
     {
-      "text": "Outside Buckingham Palace. [shares a photo of buckingham palace]",
+      "text": "Stopped by this iconic spot. Got some good shots",
       "img": {
         "id": 25,
         "prompt": "A photo of Buckingham Palace in London, UK.",
@@ -204,7 +206,7 @@
       }
     },
     {
-      "text": "Sunset at Uluru (Ayers Rock). [shares a photo of uluru ayers rock australia]",
+      "text": "Desert sunset hit different ",
       "img": {
         "id": 26,
         "prompt": "A photo of Uluru (Ayers Rock) in Australia.",
@@ -212,7 +214,7 @@
       }
     },
     {
-      "text": "Perfect day at Lake Louise! [shares a photo of lake louise banff canada]",
+      "text": "Mountain scenery is insane. Canada in the fall 🍂",
       "img": {
         "id": 27,
         "prompt": "A photo of Lake Louise in Banff National Park, Canada, with surrounding mountains.",
@@ -220,7 +222,7 @@
       }
     },
     {
-      "text": "Mystical Moai statues. [shares a photo of moai statues on easter island]",
+      "text": "These ancient statues are fascinating",
       "img": {
         "id": 28,
         "prompt": "A photo of Moai statues on Easter Island, Chile.",
@@ -228,7 +230,7 @@
       }
     },
     {
-      "text": "Hiking through Yosemite Valley. [shares a photo of yosemite valley]",
+      "text": "Nothing beats a good hike. California trails are the best",
       "img": {
         "id": 29,
         "prompt": "A photo of Yosemite Valley in California, USA, with El Capitan.",
@@ -236,7 +238,7 @@
       }
     },
     {
-      "text": "Just watched Burj Khalifa light show. [shares a photo of burj khalifa]",
+      "text": "The light show here was incredible",
       "img": {
         "id": 30,
         "prompt": "A photo of Burj Khalifa in Dubai, UAE.",
@@ -244,7 +246,7 @@
       }
     },
     {
-      "text": "Tallest tower in Tokyo. [shares a photo of tokyo skytree]",
+      "text": "The Tokyo skyline at night never gets old",
       "img": {
         "id": 31,
         "prompt": "A photo of Tokyo Skytree in Tokyo, Japan.",
@@ -252,7 +254,7 @@
       }
     },
     {
-      "text": "Walking among giant redwood trees. [shares a photo of redwood forest california]",
+      "text": "Nature walk through these massive trees. Felt so small",
       "img": {
         "id": 32,
         "prompt": "A photo of giant redwood trees in a forest in California, USA.",
@@ -260,7 +262,7 @@
       }
     },
     {
-      "text": "Cruising through Halong Bay. [shares a photo of halong bay vietnam]",
+      "text": "Water is such a gorgeous shade of blue here",
       "img": {
         "id": 33,
         "prompt": "A photo of limestone karsts in Halong Bay, Vietnam.",
@@ -268,15 +270,15 @@
       }
     },
     {
-      "text": "Met a giant tortoise in Galapagos! [shares a photo of giant tortoise galapagos]",
+      "text": "Wildlife spotting! Seen some amazing creatures",
       "img": {
         "id": 34,
-        "prompt": "A photo of a giant tortoise on the Gal\u00e1pagos Islands, Ecuador.",
+        "prompt": "A photo of a giant tortoise on the Galápagos Islands, Ecuador.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_33_imagen_1764636116901_0.png"
       }
     },
     {
-      "text": "Colorful domes at St. Basil's Cathedral. [shares a photo of st basils cathedral russia]",
+      "text": "These colorful buildings are so photogenic",
       "img": {
         "id": 35,
         "prompt": "A photo of St. Basil's Cathedral in Moscow, Russia.",
@@ -284,7 +286,7 @@
       }
     },
     {
-      "text": "Victoria Falls thunder is incredible. [shares a photo of victoria falls zimbabwe]",
+      "text": "The power of nature is unreal. Got some great video too",
       "img": {
         "id": 36,
         "prompt": "A photo of Victoria Falls on the Zambia-Zimbabwe border.",
@@ -292,7 +294,7 @@
       }
     },
     {
-      "text": "Terraced rice fields here in Bali! [shares a photo of bali rice terraces]",
+      "text": "The landscape here is absolutely stunning. So green",
       "img": {
         "id": 37,
         "prompt": "A photo of rice terraces in Bali, Indonesia.",
@@ -300,63 +302,63 @@
       }
     },
     {
-      "text": "I recently bought a new iPhone 15 Pro Max. Can you keep the receipt for me? [shares a photo of the receipt]",
+      "text": "Just made a purchase. Keeping the receipt for warranty",
       "img": {
         "id": 38,
         "prompt": "A photo of a receipt from the Apple Store at Fifth Avenue in New York, showing an iPhone 15 Pro Max for $1099.00 and a total of $1099.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_37_imagen_1764636155584_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/38.png"
       }
     },
     {
-      "text": "Just bought a 55-inch 4K TV today. Here's the receipt. [shares a photo of the receipt]",
+      "text": "New tech day! Receipt saved for records",
       "img": {
         "id": 39,
         "prompt": "A photo of a receipt from the Best Buy store in San Francisco showing a 55-inch 4K TV for $799.00 and a total of $799.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_38_imagen_1764636166640_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/39.png"
       }
     },
     {
-      "text": "Went grocery shopping, here's the receipt from Walmart. [shares a photo of the receipt]",
+      "text": "Grocery haul done. Here's the receipt",
       "img": {
         "id": 40,
         "prompt": "A photo of a receipt from Walmart in San Jose listing 'Milk - $5.00', 'Bread - $2.00', 'Eggs - $3.00', and a total of $10.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_39_imagen_1764636175682_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/40.png"
       }
     },
     {
-      "text": "Had lunch at The Diner. Here's our receipt. [shares a photo of the receipt]",
+      "text": "Lunch was great! Saving the receipt",
       "img": {
         "id": 41,
         "prompt": "A photo of a receipt from The Diner on Main Street listing 'Burger - $8.00', 'Fries - $3.00', 'Soda - $2.00', and a total of $13.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_40_imagen_1764636189741_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/41.png"
       }
     },
     {
-      "text": "Stopped by Cafe Latte for breakfast. Here's the receipt. [shares a photo of the receipt]",
+      "text": "Coffee and pastry run. Got the receipt",
       "img": {
         "id": 42,
         "prompt": "A photo of a receipt from Cafe Latte listing 'Caffe Latte - $4.50', 'Blueberry Muffin - $2.50', and a total of $7.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_41_imagen_1764636198100_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/42.png"
       }
     },
     {
-      "text": "I purchased clothes at H&M today. Here's the receipt. [shares a photo of the receipt]",
+      "text": "Shopping spree at my favorite store. Receipt for returns",
       "img": {
         "id": 43,
         "prompt": "A photo of a receipt from an H&M store in London listing 'Jeans - $40.00', 'Shirt - $25.00', and a total of $65.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_42_imagen_1764636205920_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/43.png"
       }
     },
     {
-      "text": "Filled up my car at Shell. Keeping the receipt for reference. [shares a photo of the receipt]",
+      "text": "Fuel stop. Keeping the receipt",
       "img": {
         "id": 44,
         "prompt": "A photo of a receipt from a Shell gas station in Chicago listing 'Gasoline - $30.00' and a total of $30.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_43_imagen_1764636214483_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/44.png"
       }
     },
     {
-      "text": "Picked up some items at CVS pharmacy. Here's the receipt. [shares a photo of the receipt]",
+      "text": "Quick pharmacy run. Got the receipt",
       "img": {
         "id": 45,
         "prompt": "A photo of a receipt from CVS Pharmacy in Boston listing 'Vitamins - $12.00', 'Bandages - $5.00', and a total of $17.00.",
@@ -364,31 +366,31 @@
       }
     },
     {
-      "text": "Bought a couple of books at Barnes & Noble. Here's the receipt. [shares a photo of the receipt]",
+      "text": "Found some good reads. Here's the receipt",
       "img": {
         "id": 46,
         "prompt": "A photo of a receipt from Barnes & Noble in New York listing 'Book - $20.00', 'Magazine - $5.00', and a total of $25.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_45_imagen_1764636231839_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/46.png"
       }
     },
     {
-      "text": "I grabbed a croissant and baguette from the bakery. Here's the receipt. [shares a photo of the receipt]",
+      "text": "Stopped by the bakery. Receipt attached",
       "img": {
         "id": 47,
-        "prompt": "A photo of a receipt from Boulangerie Parisienne in Paris listing 'Croissant - \u20ac2.00', 'Baguette - \u20ac3.00', and a total of \u20ac5.00.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_46_imagen_1764636240210_0.png"
+        "prompt": "A photo of a receipt from Boulangerie Parisienne in Paris listing 'Croissant - €2.00', 'Baguette - €3.00', and a total of €5.00.",
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/47.png"
       }
     },
     {
-      "text": "I wrote out the grocery list for this week. [shares a photo of the grocery list]",
+      "text": "Made a shopping list for the week",
       "img": {
         "id": 48,
         "prompt": "A photo of a handwritten grocery list on a refrigerator, listing items: 'Milk', 'Eggs', 'Bread', 'Cheese'.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_47_imagen_1764636247988_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/48.png"
       }
     },
     {
-      "text": "Need to pick up some items. Here's my shopping list. [shares a photo of the grocery list]",
+      "text": "Jotted down a few things we need",
       "img": {
         "id": 49,
         "prompt": "A photo of a handwritten grocery list on a notepad, listing items: 'Coffee', 'Cereal', 'Bananas', 'Sugar'.",
@@ -396,31 +398,31 @@
       }
     },
     {
-      "text": "Don't forget these groceries! [shares a photo of the grocery list]",
+      "text": "Reminder to grab these items",
       "img": {
         "id": 50,
         "prompt": "A photo of a handwritten grocery list on a whiteboard, listing items: 'Tomatoes', 'Chicken', 'Rice', 'Yogurt'.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_49_imagen_1764636263231_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/50.png"
       }
     },
     {
-      "text": "I jotted down what we need from the store. [shares a photo of the grocery list]",
+      "text": "Quick notes for the store trip",
       "img": {
         "id": 51,
         "prompt": "A photo of a handwritten grocery list on paper, listing items: 'Flour', 'Sugar', 'Tea', 'Apples'.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_50_imagen_1764636270827_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/51.png"
       }
     },
     {
-      "text": "I just bought a new Nikon D3500 camera. Can you keep the warranty card safe? [shares a photo of the warranty card]",
+      "text": "Just got a new camera! Important documents to store",
       "img": {
         "id": 52,
         "prompt": "A photo of a warranty card for a Nikon D3500 DSLR camera, showing the model and serial number SN: D3500-1234 and purchase date 2025-11-01.",
-        "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_51_imagen_1764636279058_0.png"
+        "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/52.png"
       }
     },
     {
-      "text": "I recently got a Dell XPS 13 laptop. Here's the warranty certificate. [shares a photo of the warranty card]",
+      "text": "New laptop day! Keeping all the paperwork organized",
       "img": {
         "id": 53,
         "prompt": "A photo of a warranty certificate for a Dell XPS 13 laptop, showing the product name and serial number DXPS13-5678 and purchase date 2025-10-15.",

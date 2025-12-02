@@ -9,3 +9,4 @@ venv/
 data/metadata/generated_images/
 *.log
 .DS_Store
+google-cloud-key.json

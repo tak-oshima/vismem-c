@@ -75,7 +75,14 @@ def get_session_facts(args, agent_a, agent_b, session_idx, return_embeddings=Tru
     # print(conversation)
     
     input = task['input_prefix'] + conversation
-    facts = run_json_trials(query, num_gen=1, num_tokens_request=500, use_16k=False, examples=examples, input=input)
+    facts = run_json_trials(
+        query,
+        num_gen=1,
+        num_tokens_request=1200,
+        use_16k=True,
+        examples=examples,
+        input=input,
+    )
 
     if not return_embeddings:
         return facts

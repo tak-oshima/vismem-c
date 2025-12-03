@@ -46,8 +46,8 @@ def run_json_trials(query, num_gen=1, num_tokens_request=1000,
             time.sleep(1)
             print("Retrying to avoid JsonDecodeError, trial %s ..." % counter)
             print(output)
-            if counter == 10:
-                print("Exiting after 10 trials")
+            if counter == 50:
+                print("Exiting after 50 trials")
                 sys.exit()
             continue
     return facts

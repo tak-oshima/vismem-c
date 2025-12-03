@@ -1,34 +1,1922 @@
 {
   "qa": [
     {
-      "question": "How many cities has Justin visited abroad in 2024?",
-      "answer": "2",
-      "evidence": [],
+      "question": "When did Justin visit France?",
+      "answer": "September 10, 2023",
+      "evidence": [
+        "D125:31"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What photo did Justin share from his trip to France?",
+      "answer": "A photo of the Eiffel Tower",
+      "evidence": [
+        "D125:31"
+      ],
       "category": 1
     },
     {
-      "question": "Which city did Justin visit in June, 2024?",
-      "answer": "Paris",
-      "evidence": [],
+      "question": "When did Justin visit London?",
+      "answer": "September 13, 2023",
+      "evidence": [
+        "D126:49"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What photo did Justin share from his trip to London?",
+      "answer": "A photo of Big Ben",
+      "evidence": [
+        "D126:49"
+      ],
       "category": 1
     },
     {
-      "question": "Which city did Justin visit in July, 2024?",
-      "answer": "London",
-      "evidence": [],
-      "category": 1
+      "question": "When did Justin purchase the Airpods Max?",
+      "answer": "February 12, 2023",
+      "evidence": [
+        "D10:33"
+      ],
+      "category": 2
     },
     {
-      "question": "How much was the Airpods Max Justin bought?",
+      "question": "How much did Justin pay for the Airpods Max he purchased?",
       "answer": "$779",
-      "evidence": [],
+      "evidence": [
+        "D10:33"
+      ],
       "category": 1
     },
     {
       "question": "Which store at which location did Justin buy the Airpods Max from?",
       "answer": "Apple Store, Pioneer Place",
-      "evidence": [],
+      "evidence": [
+        "D10:33"
+      ],
       "category": 1
+    },
+    {
+      "question": "On September 10, 2023, what landmark or place did Justin photograph?",
+      "answer": "Eiffel Tower",
+      "evidence": [
+        "D125:31"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Eiffel Tower?",
+      "answer": "Paris, France",
+      "evidence": [
+        "D125:31"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Eiffel Tower?",
+      "answer": "September 10, 2023",
+      "evidence": [
+        "D125:31"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On September 13, 2023, what landmark or place did Justin photograph?",
+      "answer": "Big Ben",
+      "evidence": [
+        "D126:49"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Big Ben?",
+      "answer": "London, England",
+      "evidence": [
+        "D126:49"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Big Ben?",
+      "answer": "September 13, 2023",
+      "evidence": [
+        "D126:49"
+      ],
+      "category": 2
+    },
+    {
+      "question": "When did Justin share the receipt from Apple Store?",
+      "answer": "February 12, 2023",
+      "evidence": [
+        "D10:33"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on February 12, 2023?",
+      "answer": "Apple Store",
+      "evidence": [
+        "D10:33"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the Apple Store receipt?",
+      "answer": "Pioneer Place",
+      "evidence": [
+        "D10:33"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Apple Store?",
+      "answer": "$779",
+      "evidence": [
+        "D10:33"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Apple Store receipt show Justin bought?",
+      "answer": "Airpods Max",
+      "evidence": [
+        "D10:33"
+      ],
+      "category": 1
+    },
+    {
+      "question": "On August 22, 2023, what landmark or place did Justin photograph?",
+      "answer": "Statue of Liberty",
+      "evidence": [
+        "D113:47"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Statue of Liberty?",
+      "answer": "New York City, USA",
+      "evidence": [
+        "D113:47"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Statue of Liberty?",
+      "answer": "August 22, 2023",
+      "evidence": [
+        "D113:47"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On October 21, 2023, what landmark or place did Justin photograph?",
+      "answer": "Great Wall of China",
+      "evidence": [
+        "D146:39"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Great Wall of China?",
+      "answer": "Beijing, China",
+      "evidence": [
+        "D146:39"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Great Wall of China?",
+      "answer": "October 21, 2023",
+      "evidence": [
+        "D146:39"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On January 25, 2024, what landmark or place did Justin photograph?",
+      "answer": "Taj Mahal",
+      "evidence": [
+        "D199:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Taj Mahal?",
+      "answer": "Agra, India",
+      "evidence": [
+        "D199:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Taj Mahal?",
+      "answer": "January 25, 2024",
+      "evidence": [
+        "D199:13"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On June 24, 2023, what landmark or place did Justin photograph?",
+      "answer": "Colosseum",
+      "evidence": [
+        "D80:39"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Colosseum?",
+      "answer": "Rome, Italy",
+      "evidence": [
+        "D80:39"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Colosseum?",
+      "answer": "June 24, 2023",
+      "evidence": [
+        "D80:39"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On November 12, 2023, what landmark or place did Justin photograph?",
+      "answer": "Sydney Opera House",
+      "evidence": [
+        "D157:49"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Sydney Opera House?",
+      "answer": "Sydney, Australia",
+      "evidence": [
+        "D157:49"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Sydney Opera House?",
+      "answer": "November 12, 2023",
+      "evidence": [
+        "D157:49"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On January 12, 2024, what landmark or place did Justin photograph?",
+      "answer": "Machu Picchu",
+      "evidence": [
+        "D191:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Machu Picchu?",
+      "answer": "Peru",
+      "evidence": [
+        "D191:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Machu Picchu?",
+      "answer": "January 12, 2024",
+      "evidence": [
+        "D191:11"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On March 8, 2023, what landmark or place did Justin photograph?",
+      "answer": "Grand Canyon",
+      "evidence": [
+        "D25:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Grand Canyon?",
+      "answer": "Arizona, USA",
+      "evidence": [
+        "D25:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Grand Canyon?",
+      "answer": "March 8, 2023",
+      "evidence": [
+        "D25:11"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On September 30, 2023, what landmark or place did Justin photograph?",
+      "answer": "Niagara Falls",
+      "evidence": [
+        "D135:15"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Niagara Falls?",
+      "answer": "the border of USA and Canada",
+      "evidence": [
+        "D135:15"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Niagara Falls?",
+      "answer": "September 30, 2023",
+      "evidence": [
+        "D135:15"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On December 31, 2023, what landmark or place did Justin photograph?",
+      "answer": "Christ the Redeemer statue",
+      "evidence": [
+        "D185:7"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Christ the Redeemer statue?",
+      "answer": "Rio de Janeiro, Brazil",
+      "evidence": [
+        "D185:7"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Christ the Redeemer statue?",
+      "answer": "December 31, 2023",
+      "evidence": [
+        "D185:7"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On January 4, 2024, what landmark or place did Justin photograph?",
+      "answer": "Great Sphinx and Pyramids of Giza",
+      "evidence": [
+        "D187:1"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Great Sphinx and Pyramids of Giza?",
+      "answer": "Egypt",
+      "evidence": [
+        "D187:1"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Great Sphinx and Pyramids of Giza?",
+      "answer": "January 4, 2024",
+      "evidence": [
+        "D187:1"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On April 13, 2023, what landmark or place did Justin photograph?",
+      "answer": "Mount Kilimanjaro",
+      "evidence": [
+        "D43:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Mount Kilimanjaro?",
+      "answer": "Tanzania",
+      "evidence": [
+        "D43:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Mount Kilimanjaro?",
+      "answer": "April 13, 2023",
+      "evidence": [
+        "D43:13"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On January 9, 2024, what landmark or place did Justin photograph?",
+      "answer": "Mount Fuji",
+      "evidence": [
+        "D190:35"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Mount Fuji?",
+      "answer": "Japan",
+      "evidence": [
+        "D190:35"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Mount Fuji?",
+      "answer": "January 9, 2024",
+      "evidence": [
+        "D190:35"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On October 13, 2023, what landmark or place did Justin photograph?",
+      "answer": "Table Mountain",
+      "evidence": [
+        "D142:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Table Mountain?",
+      "answer": "Cape Town, South Africa",
+      "evidence": [
+        "D142:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Table Mountain?",
+      "answer": "October 13, 2023",
+      "evidence": [
+        "D142:11"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On July 20, 2023, what landmark or place did Justin photograph?",
+      "answer": "Village of Oia",
+      "evidence": [
+        "D93:3"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of village of Oia?",
+      "answer": "Santorini island, Greece",
+      "evidence": [
+        "D93:3"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of village of Oia?",
+      "answer": "July 20, 2023",
+      "evidence": [
+        "D93:3"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What extra detail is mentioned about the village of Oia photo?",
+      "answer": "white buildings and blue domes",
+      "evidence": [
+        "D93:3"
+      ],
+      "category": 1
+    },
+    {
+      "question": "On May 22, 2023, what landmark or place did Justin photograph?",
+      "answer": "Neuschwanstein Castle",
+      "evidence": [
+        "D63:37"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Neuschwanstein Castle?",
+      "answer": "Bavaria, Germany",
+      "evidence": [
+        "D63:37"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Neuschwanstein Castle?",
+      "answer": "May 22, 2023",
+      "evidence": [
+        "D63:37"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On January 14, 2024, what landmark or place did Justin photograph?",
+      "answer": "Al-Khazneh temple",
+      "evidence": [
+        "D193:7"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Al-Khazneh temple?",
+      "answer": "Petra, Jordan",
+      "evidence": [
+        "D193:7"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Al-Khazneh temple?",
+      "answer": "January 14, 2024",
+      "evidence": [
+        "D193:7"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On August 3, 2023, what landmark or place did Justin photograph?",
+      "answer": "Angkor Wat temple",
+      "evidence": [
+        "D102:35"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Angkor Wat temple?",
+      "answer": "Cambodia",
+      "evidence": [
+        "D102:35"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Angkor Wat temple?",
+      "answer": "August 3, 2023",
+      "evidence": [
+        "D102:35"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On July 8, 2023, what landmark or place did Justin photograph?",
+      "answer": "Mount Rushmore",
+      "evidence": [
+        "D87:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Mount Rushmore?",
+      "answer": "South Dakota, USA",
+      "evidence": [
+        "D87:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Mount Rushmore?",
+      "answer": "July 8, 2023",
+      "evidence": [
+        "D87:13"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On December 20, 2023, what landmark or place did Justin photograph?",
+      "answer": "Golden Gate Bridge",
+      "evidence": [
+        "D179:31"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Golden Gate Bridge?",
+      "answer": "San Francisco, USA",
+      "evidence": [
+        "D179:31"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Golden Gate Bridge?",
+      "answer": "December 20, 2023",
+      "evidence": [
+        "D179:31"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On January 31, 2023, what landmark or place did Justin photograph?",
+      "answer": "CN Tower",
+      "evidence": [
+        "D3:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of CN Tower?",
+      "answer": "Toronto, Canada",
+      "evidence": [
+        "D3:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of CN Tower?",
+      "answer": "January 31, 2023",
+      "evidence": [
+        "D3:17"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On April 5, 2023, what landmark or place did Justin photograph?",
+      "answer": "Parthenon",
+      "evidence": [
+        "D38:41"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Parthenon?",
+      "answer": "the Acropolis in Athens, Greece",
+      "evidence": [
+        "D38:41"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Parthenon?",
+      "answer": "April 5, 2023",
+      "evidence": [
+        "D38:41"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On August 5, 2023, what landmark or place did Justin photograph?",
+      "answer": "Buckingham Palace",
+      "evidence": [
+        "D103:29"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Buckingham Palace?",
+      "answer": "London, UK",
+      "evidence": [
+        "D103:29"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Buckingham Palace?",
+      "answer": "August 5, 2023",
+      "evidence": [
+        "D103:29"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On July 2, 2023, what landmark or place did Justin photograph?",
+      "answer": "Uluru (Ayers Rock)",
+      "evidence": [
+        "D84:37"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Uluru (Ayers Rock)?",
+      "answer": "Australia",
+      "evidence": [
+        "D84:37"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Uluru (Ayers Rock)?",
+      "answer": "July 2, 2023",
+      "evidence": [
+        "D84:37"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On February 3, 2023, what landmark or place did Justin photograph?",
+      "answer": "Lake Louise",
+      "evidence": [
+        "D5:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Lake Louise?",
+      "answer": "Banff National Park, Canada",
+      "evidence": [
+        "D5:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Lake Louise?",
+      "answer": "February 3, 2023",
+      "evidence": [
+        "D5:17"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What extra detail is mentioned about the Lake Louise photo?",
+      "answer": "surrounding mountains",
+      "evidence": [
+        "D5:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "On October 7, 2023, what landmark or place did Justin photograph?",
+      "answer": "Moai statues",
+      "evidence": [
+        "D138:49"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Moai statues?",
+      "answer": "Easter Island, Chile",
+      "evidence": [
+        "D138:49"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Moai statues?",
+      "answer": "October 7, 2023",
+      "evidence": [
+        "D138:49"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On November 20, 2023, what landmark or place did Justin photograph?",
+      "answer": "Yosemite Valley",
+      "evidence": [
+        "D161:39"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Yosemite Valley?",
+      "answer": "California, USA",
+      "evidence": [
+        "D161:39"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Yosemite Valley?",
+      "answer": "November 20, 2023",
+      "evidence": [
+        "D161:39"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What extra detail is mentioned about the Yosemite Valley photo?",
+      "answer": "El Capitan",
+      "evidence": [
+        "D161:39"
+      ],
+      "category": 1
+    },
+    {
+      "question": "On December 7, 2023, what landmark or place did Justin photograph?",
+      "answer": "Burj Khalifa",
+      "evidence": [
+        "D171:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Burj Khalifa?",
+      "answer": "Dubai, UAE",
+      "evidence": [
+        "D171:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Burj Khalifa?",
+      "answer": "December 7, 2023",
+      "evidence": [
+        "D171:13"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On June 14, 2023, what landmark or place did Justin photograph?",
+      "answer": "Tokyo Skytree",
+      "evidence": [
+        "D74:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Tokyo Skytree?",
+      "answer": "Tokyo, Japan",
+      "evidence": [
+        "D74:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Tokyo Skytree?",
+      "answer": "June 14, 2023",
+      "evidence": [
+        "D74:13"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On February 15, 2023, what landmark or place did Justin photograph?",
+      "answer": "Giant redwood trees",
+      "evidence": [
+        "D12:27"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of giant redwood trees?",
+      "answer": "a forest in California, USA",
+      "evidence": [
+        "D12:27"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of giant redwood trees?",
+      "answer": "February 15, 2023",
+      "evidence": [
+        "D12:27"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On June 3, 2023, what landmark or place did Justin photograph?",
+      "answer": "Limestone karsts",
+      "evidence": [
+        "D68:19"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of limestone karsts?",
+      "answer": "Halong Bay, Vietnam",
+      "evidence": [
+        "D68:19"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of limestone karsts?",
+      "answer": "June 3, 2023",
+      "evidence": [
+        "D68:19"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On December 5, 2023, what landmark or place did Justin photograph?",
+      "answer": "A giant tortoise",
+      "evidence": [
+        "D170:3"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of a giant tortoise?",
+      "answer": "the Galápagos Islands, Ecuador",
+      "evidence": [
+        "D170:3"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of a giant tortoise?",
+      "answer": "December 5, 2023",
+      "evidence": [
+        "D170:3"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On January 8, 2024, what landmark or place did Justin photograph?",
+      "answer": "St. Basil's Cathedral",
+      "evidence": [
+        "D189:7"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of St. Basil's Cathedral?",
+      "answer": "Moscow, Russia",
+      "evidence": [
+        "D189:7"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of St. Basil's Cathedral?",
+      "answer": "January 8, 2024",
+      "evidence": [
+        "D189:7"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On August 24, 2023, what landmark or place did Justin photograph?",
+      "answer": "Victoria Falls",
+      "evidence": [
+        "D114:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of Victoria Falls?",
+      "answer": "the Zambia-Zimbabwe border",
+      "evidence": [
+        "D114:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of Victoria Falls?",
+      "answer": "August 24, 2023",
+      "evidence": [
+        "D114:23"
+      ],
+      "category": 2
+    },
+    {
+      "question": "On August 21, 2023, what landmark or place did Justin photograph?",
+      "answer": "Rice terraces",
+      "evidence": [
+        "D112:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was Justin when he shared his photo of rice terraces?",
+      "answer": "Bali, Indonesia",
+      "evidence": [
+        "D112:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share a photo of rice terraces?",
+      "answer": "August 21, 2023",
+      "evidence": [
+        "D112:23"
+      ],
+      "category": 2
+    },
+    {
+      "question": "When did Justin share the receipt from Apple Store at Fifth Avenue?",
+      "answer": "August 9, 2023",
+      "evidence": [
+        "D105:17"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on August 9, 2023?",
+      "answer": "Apple Store at Fifth Avenue",
+      "evidence": [
+        "D105:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the Apple Store at Fifth Avenue receipt?",
+      "answer": "New York",
+      "evidence": [
+        "D105:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Apple Store at Fifth Avenue?",
+      "answer": "$1099.00",
+      "evidence": [
+        "D105:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Apple Store at Fifth Avenue receipt show Justin bought?",
+      "answer": "iPhone 15 Pro Max",
+      "evidence": [
+        "D105:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from Best Buy store?",
+      "answer": "January 19, 2024",
+      "evidence": [
+        "D195:13"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on January 19, 2024?",
+      "answer": "Best Buy store",
+      "evidence": [
+        "D195:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the Best Buy store receipt?",
+      "answer": "San Francisco",
+      "evidence": [
+        "D195:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Best Buy store?",
+      "answer": "$799.00",
+      "evidence": [
+        "D195:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Best Buy store receipt show Justin bought?",
+      "answer": "55-inch 4K TV",
+      "evidence": [
+        "D195:13"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from Walmart?",
+      "answer": "February 27, 2023",
+      "evidence": [
+        "D19:5"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on February 27, 2023?",
+      "answer": "Walmart",
+      "evidence": [
+        "D19:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the Walmart receipt?",
+      "answer": "San Jose",
+      "evidence": [
+        "D19:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Walmart?",
+      "answer": "$10.00",
+      "evidence": [
+        "D19:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Walmart receipt show Justin bought?",
+      "answer": "Milk",
+      "evidence": [
+        "D19:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from Walmart?",
+      "answer": "Milk - $5.00, Bread - $2.00, Eggs - $3.00",
+      "evidence": [
+        "D19:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from Diner on Main Street?",
+      "answer": "October 27, 2023",
+      "evidence": [
+        "D149:25"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on October 27, 2023?",
+      "answer": "Diner on Main Street",
+      "evidence": [
+        "D149:25"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Diner on Main Street?",
+      "answer": "$13.00",
+      "evidence": [
+        "D149:25"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Diner on Main Street receipt show Justin bought?",
+      "answer": "Burger",
+      "evidence": [
+        "D149:25"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from Diner on Main Street?",
+      "answer": "Burger - $8.00, Fries - $3.00, Soda - $2.00",
+      "evidence": [
+        "D149:25"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from Cafe Latte?",
+      "answer": "August 29, 2023",
+      "evidence": [
+        "D117:15"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on August 29, 2023?",
+      "answer": "Cafe Latte",
+      "evidence": [
+        "D117:15"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Cafe Latte?",
+      "answer": "$7.00",
+      "evidence": [
+        "D117:15"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Cafe Latte receipt show Justin bought?",
+      "answer": "Caffe Latte",
+      "evidence": [
+        "D117:15"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from Cafe Latte?",
+      "answer": "Caffe Latte - $4.50, Blueberry Muffin - $2.50",
+      "evidence": [
+        "D117:15"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from H&M store?",
+      "answer": "May 9, 2023",
+      "evidence": [
+        "D56:5"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on May 9, 2023?",
+      "answer": "H&M store",
+      "evidence": [
+        "D56:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the H&M store receipt?",
+      "answer": "London",
+      "evidence": [
+        "D56:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from H&M store?",
+      "answer": "£65.00",
+      "evidence": [
+        "D56:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the H&M store receipt show Justin bought?",
+      "answer": "Jeans",
+      "evidence": [
+        "D56:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from H&M store?",
+      "answer": "Jeans - £40.00, Shirt - £25.00",
+      "evidence": [
+        "D56:5"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from Shell gas station?",
+      "answer": "October 25, 2023",
+      "evidence": [
+        "D148:45"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on October 25, 2023?",
+      "answer": "Shell gas station",
+      "evidence": [
+        "D148:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the Shell gas station receipt?",
+      "answer": "Chicago",
+      "evidence": [
+        "D148:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Shell gas station?",
+      "answer": "$30.00",
+      "evidence": [
+        "D148:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Shell gas station receipt show Justin bought?",
+      "answer": "Gasoline",
+      "evidence": [
+        "D148:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from Shell gas station?",
+      "answer": "Gasoline - $30.00",
+      "evidence": [
+        "D148:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from CVS Pharmacy?",
+      "answer": "January 26, 2024",
+      "evidence": [
+        "D200:11"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on January 26, 2024?",
+      "answer": "CVS Pharmacy",
+      "evidence": [
+        "D200:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the CVS Pharmacy receipt?",
+      "answer": "Boston",
+      "evidence": [
+        "D200:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from CVS Pharmacy?",
+      "answer": "$17.00",
+      "evidence": [
+        "D200:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the CVS Pharmacy receipt show Justin bought?",
+      "answer": "Vitamins",
+      "evidence": [
+        "D200:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from CVS Pharmacy?",
+      "answer": "Vitamins - $12.00, Bandages - $5.00",
+      "evidence": [
+        "D200:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from Barnes & Noble?",
+      "answer": "February 6, 2023",
+      "evidence": [
+        "D6:45"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on February 6, 2023?",
+      "answer": "Barnes & Noble",
+      "evidence": [
+        "D6:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the Barnes & Noble receipt?",
+      "answer": "New York",
+      "evidence": [
+        "D6:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Barnes & Noble?",
+      "answer": "$25.00",
+      "evidence": [
+        "D6:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Barnes & Noble receipt show Justin bought?",
+      "answer": "Book",
+      "evidence": [
+        "D6:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from Barnes & Noble?",
+      "answer": "Book - $20.00, Magazine - $5.00",
+      "evidence": [
+        "D6:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the receipt from Boulangerie Parisienne?",
+      "answer": "December 16, 2023",
+      "evidence": [
+        "D176:23"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What store is shown on the receipt Justin shared on December 16, 2023?",
+      "answer": "Boulangerie Parisienne",
+      "evidence": [
+        "D176:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What location is mentioned on the Boulangerie Parisienne receipt?",
+      "answer": "Paris",
+      "evidence": [
+        "D176:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What was the total amount on the receipt from Boulangerie Parisienne?",
+      "answer": "€5.00",
+      "evidence": [
+        "D176:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What item does the Boulangerie Parisienne receipt show Justin bought?",
+      "answer": "Croissant",
+      "evidence": [
+        "D176:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which line items are listed on the receipt from Boulangerie Parisienne?",
+      "answer": "Croissant - €2.00, Baguette - €3.00",
+      "evidence": [
+        "D176:23"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the grocery list with items like Milk?",
+      "answer": "November 5, 2023",
+      "evidence": [
+        "D153:11"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What items are written on Justin's grocery list shared on November 5, 2023?",
+      "answer": "Milk, Eggs, Bread, Cheese",
+      "evidence": [
+        "D153:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the grocery list with items like Coffee?",
+      "answer": "October 31, 2023",
+      "evidence": [
+        "D151:45"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What items are written on Justin's grocery list shared on October 31, 2023?",
+      "answer": "Coffee, Cereal, Bananas, Sugar",
+      "evidence": [
+        "D151:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the grocery list with items like Tomatoes?",
+      "answer": "March 23, 2023",
+      "evidence": [
+        "D32:43"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What items are written on Justin's grocery list shared on March 23, 2023?",
+      "answer": "Tomatoes, Chicken, Rice, Yogurt",
+      "evidence": [
+        "D32:43"
+      ],
+      "category": 1
+    },
+    {
+      "question": "When did Justin share the grocery list with items like Flour?",
+      "answer": "August 30, 2023",
+      "evidence": [
+        "D118:17"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What items are written on Justin's grocery list shared on August 30, 2023?",
+      "answer": "Flour, Sugar, Tea, Apples",
+      "evidence": [
+        "D118:17"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What product is covered by the warranty document Justin shared on March 5, 2023?",
+      "answer": "Nikon D3500 DSLR camera",
+      "evidence": [
+        "D23:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What serial number is shown on the warranty document for the Nikon D3500 DSLR camera?",
+      "answer": "D3500-1234",
+      "evidence": [
+        "D23:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What purchase date is printed on the warranty document for the Nikon D3500 DSLR camera?",
+      "answer": "November 1, 2025",
+      "evidence": [
+        "D23:11"
+      ],
+      "category": 2
+    },
+    {
+      "question": "When did Justin share the warranty document for the Nikon D3500 DSLR camera?",
+      "answer": "March 5, 2023",
+      "evidence": [
+        "D23:11"
+      ],
+      "category": 2
+    },
+    {
+      "question": "What product is covered by the warranty document Justin shared on March 11, 2023?",
+      "answer": "Dell XPS 13 laptop",
+      "evidence": [
+        "D26:25"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What serial number is shown on the warranty document for the Dell XPS 13 laptop?",
+      "answer": "DXPS13-5678",
+      "evidence": [
+        "D26:25"
+      ],
+      "category": 1
+    },
+    {
+      "question": "What purchase date is printed on the warranty document for the Dell XPS 13 laptop?",
+      "answer": "October 15, 2025",
+      "evidence": [
+        "D26:25"
+      ],
+      "category": 2
+    },
+    {
+      "question": "When did Justin share the warranty document for the Dell XPS 13 laptop?",
+      "answer": "March 11, 2023",
+      "evidence": [
+        "D26:25"
+      ],
+      "category": 2
+    },
+    {
+      "question": "Where was the grocery list shown in the photo Justin shared on November 5, 2023?",
+      "answer": "refrigerator",
+      "evidence": [
+        "D153:11"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was the grocery list shown in the photo Justin shared on October 31, 2023?",
+      "answer": "notepad",
+      "evidence": [
+        "D151:45"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Where was the grocery list shown in the photo Justin shared on March 23, 2023?",
+      "answer": "whiteboard",
+      "evidence": [
+        "D32:43"
+      ],
+      "category": 1
+    },
+    {
+      "question": "Which two landmarks did Justin photograph in London?",
+      "answer": "Big Ben and Buckingham Palace",
+      "evidence": [
+        "D126:49",
+        "D103:29"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many images did Justin share from London (including receipts)?",
+      "answer": "3",
+      "evidence": [
+        "D126:49",
+        "D103:29",
+        "D56:5"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which places in Greece did Justin share photos of?",
+      "answer": "The village of Oia on Santorini island and the Parthenon in Athens",
+      "evidence": [
+        "D93:3",
+        "D38:41"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which two places in Japan did Justin share photos of?",
+      "answer": "Mount Fuji and Tokyo Skytree",
+      "evidence": [
+        "D190:35",
+        "D74:13"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which two places in Australia did Justin share photos of?",
+      "answer": "The Sydney Opera House and Uluru (Ayers Rock)",
+      "evidence": [
+        "D157:49",
+        "D84:37"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which two waterfall photos did Justin share?",
+      "answer": "Niagara Falls and Victoria Falls",
+      "evidence": [
+        "D135:15",
+        "D114:23"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which Canada-related places did Justin share photos of?",
+      "answer": "CN Tower, Lake Louise, and Niagara Falls",
+      "evidence": [
+        "D3:17",
+        "D5:17",
+        "D135:15"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many receipts did Justin share from New York?",
+      "answer": "2",
+      "evidence": [
+        "D105:17",
+        "D6:45"
+      ],
+      "category": 3
+    },
+    {
+      "question": "What were the totals on Justin's two New York receipts?",
+      "answer": "$1099.00 and $25.00",
+      "evidence": [
+        "D105:17",
+        "D6:45"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Did Justin share more images from New York or from Paris?",
+      "answer": "New York (3 images) vs Paris (2 images)",
+      "evidence": [
+        "D113:47",
+        "D105:17",
+        "D6:45",
+        "D125:31",
+        "D176:23"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many travel photos did Justin share that were taken in the USA (including Niagara Falls on the USA-Canada border)?",
+      "answer": "7",
+      "evidence": [
+        "D113:47",
+        "D25:11",
+        "D135:15",
+        "D87:13",
+        "D179:31",
+        "D161:39",
+        "D12:27"
+      ],
+      "category": 3
+    },
+    {
+      "question": "What US landmarks or natural sites did Justin photograph?",
+      "answer": "Statue of Liberty, Grand Canyon, Niagara Falls, Mount Rushmore, Golden Gate Bridge, Yosemite Valley, and giant redwood trees",
+      "evidence": [
+        "D113:47",
+        "D25:11",
+        "D135:15",
+        "D87:13",
+        "D179:31",
+        "D161:39",
+        "D12:27"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many Apple products are shown in Justin's receipts?",
+      "answer": "2",
+      "evidence": [
+        "D10:33",
+        "D105:17"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which Apple products do Justin's receipts show he bought?",
+      "answer": "Airpods Max and iPhone 15 Pro Max",
+      "evidence": [
+        "D10:33",
+        "D105:17"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How much did Justin spend in total across his Apple Store receipts?",
+      "answer": "$1878.00",
+      "evidence": [
+        "D10:33",
+        "D105:17"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many receipts did Justin share that were not in US dollars?",
+      "answer": "2",
+      "evidence": [
+        "D56:5",
+        "D176:23"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which currencies appear on Justin's receipts?",
+      "answer": "$, £, and €",
+      "evidence": [
+        "D10:33",
+        "D105:17",
+        "D195:13",
+        "D19:5",
+        "D149:25",
+        "D117:15",
+        "D56:5",
+        "D148:45",
+        "D200:11",
+        "D6:45",
+        "D176:23"
+      ],
+      "category": 3
+    },
+    {
+      "question": "What is the combined total of all receipts in US dollars that Justin shared?",
+      "answer": "$2779.00",
+      "evidence": [
+        "D10:33",
+        "D105:17",
+        "D195:13",
+        "D19:5",
+        "D149:25",
+        "D117:15",
+        "D148:45",
+        "D200:11",
+        "D6:45"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Among the receipts in US dollars, what was the smallest total amount?",
+      "answer": "$7.00 (Cafe Latte)",
+      "evidence": [
+        "D10:33",
+        "D105:17",
+        "D195:13",
+        "D19:5",
+        "D149:25",
+        "D117:15",
+        "D148:45",
+        "D200:11",
+        "D6:45"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many unique grocery items did Justin write across all of his grocery lists?",
+      "answer": "15",
+      "evidence": [
+        "D153:11",
+        "D151:45",
+        "D32:43",
+        "D118:17"
+      ],
+      "category": 3
+    },
+    {
+      "question": "What unique items appear across all of Justin's grocery lists?",
+      "answer": "Apples, Bananas, Bread, Cereal, Cheese, Chicken, Coffee, Eggs, Flour, Milk, Rice, Sugar, Tea, Tomatoes, Yogurt",
+      "evidence": [
+        "D153:11",
+        "D151:45",
+        "D32:43",
+        "D118:17"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which grocery item appears on more than one of Justin's grocery lists?",
+      "answer": "Sugar",
+      "evidence": [
+        "D151:45",
+        "D118:17"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which two warranty documents did Justin share, and what products were they for?",
+      "answer": "A Nikon D3500 DSLR camera warranty card and a Dell XPS 13 laptop warranty certificate",
+      "evidence": [
+        "D23:11",
+        "D26:25"
+      ],
+      "category": 3
+    },
+    {
+      "question": "What serial numbers are shown on Justin's Nikon and Dell warranty documents?",
+      "answer": "D3500-1234 and DXPS13-5678",
+      "evidence": [
+        "D23:11",
+        "D26:25"
+      ],
+      "category": 3
+    },
+    {
+      "question": "What purchase dates are printed on Justin's Nikon and Dell warranty documents?",
+      "answer": "November 1, 2025 and October 15, 2025",
+      "evidence": [
+        "D23:11",
+        "D26:25"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many landmark or travel photos did Justin share in January 2024?",
+      "answer": "6",
+      "evidence": [
+        "D199:13",
+        "D191:11",
+        "D187:1",
+        "D190:35",
+        "D193:7",
+        "D189:7"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which landmarks or sites did Justin share photos of in January 2024?",
+      "answer": "Taj Mahal, Machu Picchu, Great Sphinx and Pyramids of Giza, Mount Fuji, Al-Khazneh temple, St. Basil's Cathedral",
+      "evidence": [
+        "D199:13",
+        "D191:11",
+        "D187:1",
+        "D190:35",
+        "D193:7",
+        "D189:7"
+      ],
+      "category": 3
+    },
+    {
+      "question": "How many travel photos did Justin share from Africa?",
+      "answer": "4",
+      "evidence": [
+        "D187:1",
+        "D43:13",
+        "D142:11",
+        "D114:23"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which South American countries did Justin share travel photos from?",
+      "answer": "Brazil, Peru, Chile, and Ecuador",
+      "evidence": [
+        "D185:7",
+        "D191:11",
+        "D138:49",
+        "D170:3"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which places in the Middle East did Justin share photos of?",
+      "answer": "The Al-Khazneh temple at Petra (Jordan) and Burj Khalifa (Dubai, UAE)",
+      "evidence": [
+        "D193:7",
+        "D171:13"
+      ],
+      "category": 3
+    },
+    {
+      "question": "Which three famous towers did Justin photograph?",
+      "answer": "Eiffel Tower, CN Tower, and Tokyo Skytree",
+      "evidence": [
+        "D125:31",
+        "D3:17",
+        "D74:13"
+      ],
+      "category": 3
     }
   ]
 }

@@ -13,8 +13,50 @@ from generative_agents.html_utils import convert_to_chat_html
 from generative_agents.event_utils import *
 from generative_agents.memory_utils import *
 from global_methods import run_chatgpt, set_openai_key
+import tiktoken
 
 logging.basicConfig(level=logging.INFO)
+
+MAX_MODEL_TOKENS = 16385
+COMPLETION_BUFFER = 150
+_TOKEN_ENCODER = tiktoken.get_encoding("cl100k_base")
+
+
+def trim_conv_history(agent_query, conv_so_far, completion_tokens=COMPLETION_BUFFER, model_token_limit=MAX_MODEL_TOKENS):
+    if not conv_so_far:
+        return conv_so_far
+
+    max_history_tokens = max(model_token_limit - completion_tokens, 0)
+    total_tokens = len(_TOKEN_ENCODER.encode(agent_query + conv_so_far))
+    if total_tokens <= max_history_tokens:
+        return conv_so_far
+
+    lines = conv_so_far.split('\n')
+    if not lines:
+        return conv_so_far
+
+    base_tokens = len(_TOKEN_ENCODER.encode(agent_query))
+    kept_lines = []
+    token_sum = base_tokens
+
+    for line in reversed(lines):
+        line_tokens = len(_TOKEN_ENCODER.encode(line + '\n'))
+        if not kept_lines:
+            kept_lines.insert(0, line)
+            token_sum += line_tokens
+            continue
+
+        if token_sum + line_tokens > max_history_tokens:
+            break
+
+        kept_lines.insert(0, line)
+        token_sum += line_tokens
+
+    if not kept_lines:
+        kept_lines = [lines[-1]]
+
+    trimmed = '\n'.join(kept_lines)
+    return trimmed
 
 
 def parse_args():
@@ -245,12 +287,16 @@ def get_session_summary(session, speaker_1, speaker_2, curr_date, previous_summa
 
 
 def get_all_session_summary(speaker, curr_sess_id):
-    summary = "\n"
-    for sess_id in range(1, curr_sess_id):
+    summary_lines = []
+    max_sessions = 50
+    start_id = max(1, curr_sess_id - max_sessions)
+    for sess_id in range(start_id, curr_sess_id):
         sess_date = speaker['session_%s_date_time' % sess_id]
         sess_date = sess_date[2] + ' ' + sess_date[1] + ', ' + sess_date[0]
-        summary += sess_date + ': ' + speaker["session_%s_summary" % sess_id] + '\n'
-    return summary
+        summary_lines.append(sess_date + ': ' + speaker["session_%s_summary" % sess_id])
+    if not summary_lines:
+        return "\n"
+    return "\n" + "\n".join(summary_lines) + "\n"
 
 
 def extract_session_ids(agent):
@@ -426,7 +472,8 @@ def get_session(agent_a, agent_b, args, curr_sess_id=0, initial_session=None):
         else:
             agent_query = get_agent_query(agent_b, agent_a, curr_sess_id=curr_sess_id)
         
-        output = run_chatgpt(agent_query + conv_so_far, 1, 100, 'chatgpt', temperature=1.2)
+        conv_so_far = trim_conv_history(agent_query, conv_so_far, completion_tokens=100)
+        output = run_chatgpt(agent_query + conv_so_far, 1, 100, 'chatgpt', True, temperature=1.2)
         output = output.strip().split('\n')[0]
         output = clean_dialog(output, agent_a['name'] if curr_speaker == 0 else agent_b['name'])
         output = {"text": output}

@@ -110,7 +110,7 @@ def run_chatgpt(query, num_gen=1, num_tokens_request=1000,
                         {"role": "system", "content": query}
                     ]
                 completion = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
+                    model="gpt-3.5-turbo-16k" if use_16k else "gpt-3.5-turbo",
                     temperature = temperature,
                     max_tokens = num_tokens_request,
                     n=num_gen,

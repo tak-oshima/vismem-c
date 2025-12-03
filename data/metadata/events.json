@@ -6,7 +6,9 @@
         "id": 1,
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_0_imagen_1764620419506_0.png",
         "prompt": "A photo of the Eiffel Tower in Paris, France"
-      }
+      },
+      "session_date_time": "6:38 pm on 10 September, 2023",
+      "dia_id": "D125:31"
     },
     {
       "text": "I'm on vacation! Check out what I captured this morning. [shares a photo of big ben in london, england]",
@@ -14,7 +16,9 @@
         "id": 2,
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_1_imagen_1764620432464_0.png",
         "prompt": "A photo of Big Ben in London, England"
-      }
+      },
+      "session_date_time": "2:03 am on 13 September, 2023",
+      "dia_id": "D126:49"
     },
     {
       "text": "Got myself a new pair of earbuds. Store receipt attached. [shares a photo of a receipt for the airpods max purchase at the apple store in pioneer place, total $779]",
@@ -22,7 +26,9 @@
         "id": 3,
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_2_imagen_1764620440645_0.png",
         "prompt": "A photo of a receipt for the Airpods Max purchase, at the Apple Store in Pioneer Place. Purchase total amount is $779."
-      }
+      },
+      "session_date_time": "3:41 pm on 12 February, 2023",
+      "dia_id": "D10:33"
     },
     {
       "text": "Finally made it here! Got a nice picture. [shares a photo of the statue of liberty in new york city, usa]",
@@ -30,7 +36,9 @@
         "id": 4,
         "prompt": "A photo of the Statue of Liberty in New York City, USA.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/4.png"
-      }
+      },
+      "session_date_time": "9:19 pm on 22 August, 2023",
+      "dia_id": "D113:47"
     },
     {
       "text": "The scenery is unreal. [shares a photo of the great wall of china near beijing, china]",
@@ -38,7 +46,9 @@
         "id": 5,
         "prompt": "A photo of the Great Wall of China near Beijing, China.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_4_imagen_1764635891670_0.png"
-      }
+      },
+      "session_date_time": "8:47 pm on 21 October, 2023",
+      "dia_id": "D146:39"
     },
     {
       "text": "Can't believe I'm finally here! [shares a photo of the taj mahal in agra, india]",
@@ -46,7 +56,9 @@
         "id": 6,
         "prompt": "A photo of the Taj Mahal in Agra, India.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/6.png"
-      }
+      },
+      "session_date_time": "7:01 pm on 25 January, 2024",
+      "dia_id": "D199:13"
     },
     {
       "text": "Just visited this incredible historical site. What a vibe! [shares a photo of the colosseum in rome, italy]",
@@ -54,7 +66,9 @@
         "id": 7,
         "prompt": "A photo of the Colosseum in Rome, Italy.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_6_imagen_1764636425769_0.png"
-      }
+      },
+      "session_date_time": "7:49 pm on 24 June, 2023",
+      "dia_id": "D80:39"
     },
     {
       "text": "What a perfect day! The light was amazing. [shares a photo of the sydney opera house in sydney, australia]",
@@ -62,7 +76,9 @@
         "id": 8,
         "prompt": "A photo of the Sydney Opera House in Sydney, Australia.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_7_imagen_1764635924922_0.png"
-      }
+      },
+      "session_date_time": "2:36 am on 12 November, 2023",
+      "dia_id": "D157:49"
     },
     {
       "text": "Made it! The hike was absolutely worth it. [shares a photo of machu picchu in peru]",
@@ -70,7 +86,9 @@
         "id": 9,
         "prompt": "A photo of Machu Picchu in Peru.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_8_imagen_1764636440181_0.png"
-      }
+      },
+      "session_date_time": "5:33 am on 12 January, 2024",
+      "dia_id": "D191:11"
     },
     {
       "text": "Took the scenic route today, so worth it. [shares a photo of the grand canyon in arizona, usa]",
@@ -78,7 +96,9 @@
         "id": 10,
         "prompt": "A photo of the Grand Canyon in Arizona, USA.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_9_imagen_1764636449664_0.png"
-      }
+      },
+      "session_date_time": "6:06 am on 8 March, 2023",
+      "dia_id": "D25:11"
     },
     {
       "text": "We actually went! The power is mind-blowing. [shares a photo of niagara falls on the border of usa and canada]",
@@ -86,7 +106,9 @@
         "id": 11,
         "prompt": "A photo of Niagara Falls on the border of USA and Canada.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_10_imagen_1764636464386_0.png"
-      }
+      },
+      "session_date_time": "7:17 am on 30 September, 2023",
+      "dia_id": "D135:15"
     },
     {
       "text": "The view from up here is surreal. [shares a photo of christ the redeemer statue in rio de janeiro, brazil]",
@@ -94,7 +116,9 @@
         "id": 12,
         "prompt": "A photo of Christ the Redeemer statue in Rio de Janeiro, Brazil.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_11_imagen_1764636472359_0.png"
-      }
+      },
+      "session_date_time": "4:44 am on 31 December, 2023",
+      "dia_id": "D185:7"
     },
     {
       "text": "Managed to visit this today. Speechless. [shares a photo of the great sphinx and pyramids of giza in egypt]",
@@ -102,7 +126,9 @@
         "id": 13,
         "prompt": "A photo of the Great Sphinx and Pyramids of Giza in Egypt.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_12_imagen_1764639376172_0.png"
-      }
+      },
+      "session_date_time": "8:55 pm on 4 January, 2024",
+      "dia_id": "D187:1"
     },
     {
       "text": "Finally reached the top area! Exhausted but happy. [shares a photo of mount kilimanjaro in tanzania]",
@@ -110,7 +136,9 @@
         "id": 14,
         "prompt": "A photo of Mount Kilimanjaro in Tanzania.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_13_imagen_1764636493049_0.png"
-      }
+      },
+      "session_date_time": "8:19 pm on 13 April, 2023",
+      "dia_id": "D43:13"
     },
     {
       "text": "Spotted this iconic peak! Japan trip is complete. [shares a photo of mount fuji in japan]",
@@ -118,7 +146,9 @@
         "id": 15,
         "prompt": "A photo of Mount Fuji in Japan.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_14_imagen_1764636501727_0.png"
-      }
+      },
+      "session_date_time": "9:39 pm on 9 January, 2024",
+      "dia_id": "D190:35"
     },
     {
       "text": "Hiked up here, view is 100% worth the effort. [shares a photo of table mountain in cape town, south africa]",
@@ -126,7 +156,9 @@
         "id": 16,
         "prompt": "A photo of Table Mountain in Cape Town, South Africa.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_15_imagen_1764636509633_0.png"
-      }
+      },
+      "session_date_time": "1:16 pm on 13 October, 2023",
+      "dia_id": "D142:11"
     },
     {
       "text": "Greece is absolutely beautiful. Watched the sun go down. [shares a photo of the village of oia on santorini island, greece, with white buildings and blue domes]",
@@ -134,7 +166,9 @@
         "id": 17,
         "prompt": "A photo of the village of Oia on Santorini island, Greece, with white buildings and blue domes.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_16_imagen_1764636517116_0.png"
-      }
+      },
+      "session_date_time": "2:55 am on 20 July, 2023",
+      "dia_id": "D93:3"
     },
     {
       "text": "This place exceeded all my expectations. [shares a photo of neuschwanstein castle in bavaria, germany]",
@@ -142,7 +176,9 @@
         "id": 18,
         "prompt": "A photo of Neuschwanstein Castle in Bavaria, Germany.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_17_imagen_1764635938136_0.png"
-      }
+      },
+      "session_date_time": "8:56 pm on 22 May, 2023",
+      "dia_id": "D63:37"
     },
     {
       "text": "Walking through ancient history right now. [shares a photo of al-khazneh temple at petra, jordan]",
@@ -150,7 +186,9 @@
         "id": 19,
         "prompt": "A photo of the Al-Khazneh temple at Petra, Jordan.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/19.png"
-      }
+      },
+      "session_date_time": "10:07 pm on 14 January, 2024",
+      "dia_id": "D193:7"
     },
     {
       "text": "Woke up early to catch the sunrise. So glad I did. [shares a photo of the angkor wat temple in cambodia]",
@@ -158,7 +196,9 @@
         "id": 20,
         "prompt": "A photo of the Angkor Wat temple in Cambodia.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_19_imagen_1764635964699_0.png"
-      }
+      },
+      "session_date_time": "11:15 pm on 3 August, 2023",
+      "dia_id": "D102:35"
     },
     {
       "text": "Crossed this one off my bucket list! [shares a photo of mount rushmore in south dakota, usa]",
@@ -166,7 +206,9 @@
         "id": 21,
         "prompt": "A photo of Mount Rushmore in South Dakota, USA.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_20_imagen_1764635972160_0.png"
-      }
+      },
+      "session_date_time": "9:51 pm on 8 July, 2023",
+      "dia_id": "D87:13"
     },
     {
       "text": "Early morning walk, perfect weather today. [shares a photo of the golden gate bridge in san francisco, usa]",
@@ -174,7 +216,9 @@
         "id": 22,
         "prompt": "A photo of the Golden Gate Bridge in San Francisco, USA.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_21_imagen_1764635986988_0.png"
-      }
+      },
+      "session_date_time": "9:24 pm on 20 December, 2023",
+      "dia_id": "D179:31"
     },
     {
       "text": "Toronto is stunning! City skyline looks great from here. [shares a photo of the cn tower in toronto, canada]",
@@ -182,7 +226,9 @@
         "id": 23,
         "prompt": "A photo of the CN Tower in Toronto, Canada.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_22_imagen_1764635995185_0.png"
-      }
+      },
+      "session_date_time": "6:40 am on 31 January, 2023",
+      "dia_id": "D3:17"
     },
     {
       "text": "Exploring Athens today. The history is incredible. [shares a photo of the parthenon on the acropolis in athens, greece]",
@@ -190,7 +236,9 @@
         "id": 24,
         "prompt": "A photo of the Parthenon on the Acropolis in Athens, Greece.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_23_imagen_1764639419414_0.png"
-      }
+      },
+      "session_date_time": "3:47 am on 5 April, 2023",
+      "dia_id": "D38:41"
     },
     {
       "text": "Stopped by this iconic spot. Got some good shots. [shares a photo of buckingham palace in london, uk]",
@@ -198,7 +246,9 @@
         "id": 25,
         "prompt": "A photo of Buckingham Palace in London, UK.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_24_imagen_1764636031246_0.png"
-      }
+      },
+      "session_date_time": "7:46 am on 5 August, 2023",
+      "dia_id": "D103:29"
     },
     {
       "text": "Desert sunset hit different. [shares a photo of uluru (ayers rock) in australia]",
@@ -206,7 +256,9 @@
         "id": 26,
         "prompt": "A photo of Uluru (Ayers Rock) in Australia.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_25_imagen_1764636040449_0.png"
-      }
+      },
+      "session_date_time": "10:47 am on 2 July, 2023",
+      "dia_id": "D84:37"
     },
     {
       "text": "Mountain scenery is insane. Canada in the fall. [shares a photo of lake louise in banff national park, canada, with surrounding mountains]",
@@ -214,7 +266,9 @@
         "id": 27,
         "prompt": "A photo of Lake Louise in Banff National Park, Canada, with surrounding mountains.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_26_imagen_1764636049592_0.png"
-      }
+      },
+      "session_date_time": "9:15 pm on 3 February, 2023",
+      "dia_id": "D5:17"
     },
     {
       "text": "These ancient statues are fascinating. [shares a photo of moai statues on easter island, chile]",
@@ -222,7 +276,9 @@
         "id": 28,
         "prompt": "A photo of Moai statues on Easter Island, Chile.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_27_imagen_1764636063089_0.png"
-      }
+      },
+      "session_date_time": "4:49 am on 7 October, 2023",
+      "dia_id": "D138:49"
     },
     {
       "text": "Nothing beats a good hike. California trails are the best. [shares a photo of yosemite valley in california, usa, with el capitan]",
@@ -230,7 +286,9 @@
         "id": 29,
         "prompt": "A photo of Yosemite Valley in California, USA, with El Capitan.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_28_imagen_1764636072071_0.png"
-      }
+      },
+      "session_date_time": "4:41 am on 20 November, 2023",
+      "dia_id": "D161:39"
     },
     {
       "text": "The light show here was incredible. [shares a photo of burj khalifa in dubai, uae]",
@@ -238,7 +296,9 @@
         "id": 30,
         "prompt": "A photo of Burj Khalifa in Dubai, UAE.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_29_imagen_1764636081453_0.png"
-      }
+      },
+      "session_date_time": "6:41 pm on 7 December, 2023",
+      "dia_id": "D171:13"
     },
     {
       "text": "The Tokyo skyline at night never gets old. [shares a photo of tokyo skytree in tokyo, japan]",
@@ -246,7 +306,9 @@
         "id": 31,
         "prompt": "A photo of Tokyo Skytree in Tokyo, Japan.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_30_imagen_1764636089978_0.png"
-      }
+      },
+      "session_date_time": "5:10 pm on 14 June, 2023",
+      "dia_id": "D74:13"
     },
     {
       "text": "Nature walk through these massive trees. Felt so small. [shares a photo of giant redwood trees in a forest in california, usa]",
@@ -254,7 +316,9 @@
         "id": 32,
         "prompt": "A photo of giant redwood trees in a forest in California, USA.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_31_imagen_1764636098821_0.png"
-      }
+      },
+      "session_date_time": "6:45 pm on 15 February, 2023",
+      "dia_id": "D12:27"
     },
     {
       "text": "Water is such a gorgeous shade of blue here. [shares a photo of limestone karsts in halong bay, vietnam]",
@@ -262,15 +326,19 @@
         "id": 33,
         "prompt": "A photo of limestone karsts in Halong Bay, Vietnam.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_32_imagen_1764636107701_0.png"
-      }
+      },
+      "session_date_time": "0:58 am on 3 June, 2023",
+      "dia_id": "D68:19"
     },
     {
-      "text": "Wildlife spotting! Seen some amazing creatures. [shares a photo of a giant tortoise on the galápagos islands, ecuador]",
+      "text": "Wildlife spotting! Seen some amazing creatures. [shares a photo of a giant tortoise on the gal\u00e1pagos islands, ecuador]",
       "img": {
         "id": 34,
-        "prompt": "A photo of a giant tortoise on the Galápagos Islands, Ecuador.",
+        "prompt": "A photo of a giant tortoise on the Gal\u00e1pagos Islands, Ecuador.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_33_imagen_1764636116901_0.png"
-      }
+      },
+      "session_date_time": "1:07 am on 5 December, 2023",
+      "dia_id": "D170:3"
     },
     {
       "text": "These colorful buildings are so photogenic. [shares a photo of st basils cathedral in moscow, russia]",
@@ -278,7 +346,9 @@
         "id": 35,
         "prompt": "A photo of St. Basil's Cathedral in Moscow, Russia.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_34_imagen_1764636554667_0.png"
-      }
+      },
+      "session_date_time": "3:21 am on 8 January, 2024",
+      "dia_id": "D189:7"
     },
     {
       "text": "The power of nature is unreal. Got some great video too. [shares a photo of victoria falls on the zambia-zimbabwe border]",
@@ -286,7 +356,9 @@
         "id": 36,
         "prompt": "A photo of Victoria Falls on the Zambia-Zimbabwe border.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_35_imagen_1764636139921_0.png"
-      }
+      },
+      "session_date_time": "1:12 am on 24 August, 2023",
+      "dia_id": "D114:23"
     },
     {
       "text": "The landscape here is absolutely stunning. So green. [shares a photo of rice terraces in bali, indonesia]",
@@ -294,7 +366,9 @@
         "id": 37,
         "prompt": "A photo of rice terraces in Bali, Indonesia.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_36_imagen_1764636147721_0.png"
-      }
+      },
+      "session_date_time": "3:56 pm on 21 August, 2023",
+      "dia_id": "D112:23"
     },
     {
       "text": "Just made a purchase. Keeping the receipt for warranty. [shares a photo of a receipt from the apple store at fifth avenue in new york showing an iphone 15 pro max for $1099.00, total $1099.00]",
@@ -302,7 +376,9 @@
         "id": 38,
         "prompt": "A photo of a receipt from the Apple Store at Fifth Avenue in New York, showing an iPhone 15 Pro Max for $1099.00 and a total of $1099.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/38.png"
-      }
+      },
+      "session_date_time": "2:03 am on 9 August, 2023",
+      "dia_id": "D105:17"
     },
     {
       "text": "New tech day! Receipt saved for records. [shares a photo of a receipt from best buy in san francisco showing a 55-inch 4k tv for $799.00, total $799.00]",
@@ -310,7 +386,9 @@
         "id": 39,
         "prompt": "A photo of a receipt from the Best Buy store in San Francisco showing a 55-inch 4K TV for $799.00 and a total of $799.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/39.png"
-      }
+      },
+      "session_date_time": "6:45 pm on 19 January, 2024",
+      "dia_id": "D195:13"
     },
     {
       "text": "Grocery haul done. Here's the receipt. [shares a photo of a receipt from walmart in san jose listing milk $5.00, bread $2.00, eggs $3.00, total $10.00]",
@@ -318,7 +396,9 @@
         "id": 40,
         "prompt": "A photo of a receipt from Walmart in San Jose listing 'Milk - $5.00', 'Bread - $2.00', 'Eggs - $3.00', and a total of $10.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/40.png"
-      }
+      },
+      "session_date_time": "8:47 pm on 27 February, 2023",
+      "dia_id": "D19:5"
     },
     {
       "text": "Lunch was great! Saving the receipt. [shares a photo of a receipt from the diner on main street listing burger $8.00, fries $3.00, soda $2.00, total $13.00]",
@@ -326,7 +406,9 @@
         "id": 41,
         "prompt": "A photo of a receipt from The Diner on Main Street listing 'Burger - $8.00', 'Fries - $3.00', 'Soda - $2.00', and a total of $13.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/41.png"
-      }
+      },
+      "session_date_time": "6:30 pm on 27 October, 2023",
+      "dia_id": "D149:25"
     },
     {
       "text": "Coffee and pastry run. Got the receipt. [shares a photo of a receipt from cafe latte listing caffe latte $4.50, blueberry muffin $2.50, total $7.00]",
@@ -334,15 +416,19 @@
         "id": 42,
         "prompt": "A photo of a receipt from Cafe Latte listing 'Caffe Latte - $4.50', 'Blueberry Muffin - $2.50', and a total of $7.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/42.png"
-      }
+      },
+      "session_date_time": "2:43 pm on 29 August, 2023",
+      "dia_id": "D117:15"
     },
     {
-      "text": "Shopping spree at my favorite store. Receipt for returns. [shares a photo of a receipt from h&m in london listing jeans £40.00, shirt £25.00, total £65.00]",
+      "text": "Shopping spree at my favorite store. Receipt for returns. [shares a photo of a receipt from h&m in london listing jeans \u00a340.00, shirt \u00a325.00, total \u00a365.00]",
       "img": {
         "id": 43,
-        "prompt": "A photo of a receipt from an H&M store in London listing 'Jeans - £40.00', 'Shirt - £25.00', and a total of £65.00.",
+        "prompt": "A photo of a receipt from an H&M store in London listing 'Jeans - \u00a340.00', 'Shirt - \u00a325.00', and a total of \u00a365.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/43-London.png"
-      }
+      },
+      "session_date_time": "6:48 pm on 9 May, 2023",
+      "dia_id": "D56:5"
     },
     {
       "text": "Fuel stop. Keeping the receipt. [shares a photo of a receipt from shell gas station in chicago listing gasoline $30.00, total $30.00]",
@@ -350,7 +436,9 @@
         "id": 44,
         "prompt": "A photo of a receipt from a Shell gas station in Chicago listing 'Gasoline - $30.00' and a total of $30.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/44.png"
-      }
+      },
+      "session_date_time": "8:05 pm on 25 October, 2023",
+      "dia_id": "D148:45"
     },
     {
       "text": "Quick pharmacy run. Got the receipt. [shares a photo of a receipt from cvs pharmacy in boston listing vitamins $12.00, bandages $5.00, total $17.00]",
@@ -358,7 +446,9 @@
         "id": 45,
         "prompt": "A photo of a receipt from CVS Pharmacy in Boston listing 'Vitamins - $12.00', 'Bandages - $5.00', and a total of $17.00.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_44_imagen_1764636221825_0.png"
-      }
+      },
+      "session_date_time": "10:45 pm on 26 January, 2024",
+      "dia_id": "D200:11"
     },
     {
       "text": "Found some good reads. Here's the receipt. [shares a photo of a receipt from barnes & noble in new york listing book $20.00, magazine $5.00, total $25.00]",
@@ -366,15 +456,19 @@
         "id": 46,
         "prompt": "A photo of a receipt from Barnes & Noble in New York listing 'Book - $20.00', 'Magazine - $5.00', and a total of $25.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/46.png"
-      }
+      },
+      "session_date_time": "5:02 am on 6 February, 2023",
+      "dia_id": "D6:45"
     },
     {
-      "text": "Stopped by the bakery. Receipt attached. [shares a photo of a receipt from boulangerie parisienne in paris listing croissant €2.00, baguette €3.00, total €5.00]",
+      "text": "Stopped by the bakery. Receipt attached. [shares a photo of a receipt from boulangerie parisienne in paris listing croissant \u20ac2.00, baguette \u20ac3.00, total \u20ac5.00]",
       "img": {
         "id": 47,
-        "prompt": "A photo of a receipt from Boulangerie Parisienne in Paris listing 'Croissant - €2.00', 'Baguette - €3.00', and a total of €5.00.",
+        "prompt": "A photo of a receipt from Boulangerie Parisienne in Paris listing 'Croissant - \u20ac2.00', 'Baguette - \u20ac3.00', and a total of \u20ac5.00.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/47.png"
-      }
+      },
+      "session_date_time": "8:21 pm on 16 December, 2023",
+      "dia_id": "D176:23"
     },
     {
       "text": "Made a shopping list for the week. [shares a photo of a handwritten grocery list on a refrigerator listing milk, eggs, bread, cheese]",
@@ -382,7 +476,9 @@
         "id": 48,
         "prompt": "A photo of a handwritten grocery list on a refrigerator, listing items: 'Milk', 'Eggs', 'Bread', 'Cheese'.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/48.png"
-      }
+      },
+      "session_date_time": "5:04 pm on 5 November, 2023",
+      "dia_id": "D153:11"
     },
     {
       "text": "Jotted down a few things we need. [shares a photo of a handwritten grocery list on a notepad listing coffee, cereal, bananas, sugar]",
@@ -390,7 +486,9 @@
         "id": 49,
         "prompt": "A photo of a handwritten grocery list on a notepad, listing items: 'Coffee', 'Cereal', 'Bananas', 'Sugar'.",
         "url": "https://vismem-c-images-aadhi.s3.amazonaws.com/vismen/event_48_imagen_1764636255018_0.png"
-      }
+      },
+      "session_date_time": "9:48 am on 31 October, 2023",
+      "dia_id": "D151:45"
     },
     {
       "text": "Reminder to grab these items. [shares a photo of a handwritten grocery list on a whiteboard listing tomatoes, chicken, rice, yogurt]",
@@ -398,7 +496,9 @@
         "id": 50,
         "prompt": "A photo of a handwritten grocery list on a whiteboard, listing items: 'Tomatoes', 'Chicken', 'Rice', 'Yogurt'.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/50.png"
-      }
+      },
+      "session_date_time": "1:32 am on 23 March, 2023",
+      "dia_id": "D32:43"
     },
     {
       "text": "Quick notes for the store trip. [shares a photo of a handwritten grocery list on paper listing flour, sugar, tea, apples]",
@@ -406,7 +506,9 @@
         "id": 51,
         "prompt": "A photo of a handwritten grocery list on paper, listing items: 'Flour', 'Sugar', 'Tea', 'Apples'.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/51.png"
-      }
+      },
+      "session_date_time": "11:08 pm on 30 August, 2023",
+      "dia_id": "D118:17"
     },
     {
       "text": "Just got a new camera! Important documents to store. [shares a photo of a warranty card for a nikon d3500 dslr camera showing model and serial number sn d3500-1234, purchase date 2025-11-01]",
@@ -414,7 +516,9 @@
         "id": 52,
         "prompt": "A photo of a warranty card for a Nikon D3500 DSLR camera, showing the model and serial number SN: D3500-1234 and purchase date 2025-11-01.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/52.png"
-      }
+      },
+      "session_date_time": "1:53 pm on 5 March, 2023",
+      "dia_id": "D23:11"
     },
     {
       "text": "New laptop day! Keeping all the paperwork organized. [shares a photo of a warranty certificate for a dell xps 13 laptop showing serial number dxps13-5678, purchase date 2025-10-15]",
@@ -422,7 +526,9 @@
         "id": 53,
         "prompt": "A photo of a warranty certificate for a Dell XPS 13 laptop, showing the product name and serial number DXPS13-5678 and purchase date 2025-10-15.",
         "url": "https://vismem-c-images-aadhi.s3.us-east-2.amazonaws.com/vismen/53-dell+waranty.png"
-      }
+      },
+      "session_date_time": "2:02 am on 11 March, 2023",
+      "dia_id": "D26:25"
     }
   ]
 }

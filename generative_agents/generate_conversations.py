@@ -208,6 +208,19 @@ def prepare_event_prefill(args, start_session):
             "session_map": defaultdict(list),
         }
 
+    available_sessions = max(0, args.num_sessions - start_session + 1)
+    if len(events) > available_sessions:
+        logging.warning(
+            "Not enough sessions available (%s) to schedule %s events; skipping event prefill for this run.",
+            available_sessions,
+            len(events),
+        )
+        return {
+            "metadata": metadata,
+            "assignments": [],
+            "session_map": defaultdict(list),
+        }
+
     try:
         assignments, session_map = assign_events_to_sessions(
             events,

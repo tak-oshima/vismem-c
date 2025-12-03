@@ -107,28 +107,24 @@ def assign_events_to_sessions(events, num_sessions, max_turns_per_session, start
     if not odd_turns:
         raise ValueError("max_turns_per_session must be at least 1 to schedule events.")
 
-    available_slots = [(session, turn) for session in sessions for turn in odd_turns]
-
-    if len(events) > len(available_slots):
+    if len(events) > len(sessions):
         raise ValueError(
-            "Not enough odd-numbered turn slots to schedule all events. "
-            f"{len(events)} events but only {len(available_slots)} available slots."
+            "Not enough sessions to schedule all events. "
+            f"{len(events)} events but only {len(sessions)} sessions."
         )
 
-    random.shuffle(available_slots)
+    random_sessions = random.sample(sessions, len(events))
 
     assignments = []
-    for idx, _ in enumerate(events):
-        session, turn = available_slots[idx]
+    session_map = defaultdict(list)
+    for idx, session in enumerate(random_sessions):
+        turn = random.choice(odd_turns)
         assignments.append({
             "index": idx,
             "session": session,
             "turn": turn,
         })
-
-    session_map = defaultdict(list)
-    for assignment in assignments:
-        session_map[assignment["session"]].append((assignment["turn"], assignment["index"]))
+        session_map[session].append((turn, idx))
 
     for session_id in session_map:
         session_map[session_id].sort(key=lambda item: item[0])
@@ -229,7 +225,8 @@ def get_random_date():
 def get_session_summary(session, speaker_1, speaker_2, curr_date, previous_summary=""):
     session_query = ''
     for c in session:
-        session_query += "%s: %s\n" % (c["speaker"], c["text"])
+        utterance = c.get("clean_text") or c.get("text", "")
+        session_query += "%s: %s\n" % (c["speaker"], utterance)
         if "image" in c:
             session_query += "[%s shares %s]\n" % (c["speaker"], c["image"])
 

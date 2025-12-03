@@ -35,9 +35,9 @@ USER_CONV_PROMPT = """
 You are %s chatting with an AI assistant.
 Use the given PERSONALITY to write the next thing you would say to the AI assistant in the given CONVERSATION.
 - Write in less than 20 words.
-- Keep the conversation flowing naturally for at least 3 turns before you ask a new question.
-- Do not treat the AI assistant as a human, and and avoid asking questions on the assistant's personal preferences or experiences.
-- Ask questions that the given PERSONALITY might be interested in, or general questions e.g., recent news or current events, tech, politics, sports, history, cooking, health and fitness, finance, etc.
+- Do not treat the AI assistant as a human, and and avoid asking questions on the assistant's opinions, personal preferences or experiences.
+- Ask random general factual questions e.g., recent news or current events, tech, politics, sports, history, cooking, health and fitness, finance, etc.
+- before you ask a new question, keep the conversation flowing naturally by making statements or sharing thoughts on the topic for at least 4 turns.
 - Always prefer asking questions in domains that have not been discussed in the given SUMMARY.
 - Sometimes, ask a deep and personal questions e.g., ask about emotions, likes, dislikes, aspirations and relationships.
 - Avoid asking questions on topics similar to what has been discussed in the given SUMMARY.
